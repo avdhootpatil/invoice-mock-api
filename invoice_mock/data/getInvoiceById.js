@@ -85,6 +85,7 @@ module.exports = () => {
     totalCGST: 16,
     totalSGST: 16,
     totalIGST: 0,
+    totalUTGST:0,
     lineItems: [
       {
         goodsAndService: {
