@@ -1,16 +1,14 @@
 module.exports = () => {
   // return {
   //   customer: null,
+  //   invoiceNo: null,
   //   customerBranch: null,
   //   invoiceDate: "2020-09-08T06:30:01.851Z",
   //   dueDate: "2020-09-08T06:30:01.851Z",
   //   currency: null,
   //   gstin: null,
-  //   exchangeRate: 0.0,
-  //   job: {
-  //     id: 0,
-  //     number: null,
-  //   },
+  //   exchangeRate: null,
+  //   job: null,
   //   salesPerson: null,
   //   placeOfSupply: null,
   //   txnType: null,
@@ -24,10 +22,7 @@ module.exports = () => {
   //   hasLUT: null,
   //   lineItems: [
   //     {
-  //       goodsAndService: {
-  //         id: 0,
-  //         name: null,
-  //       },
+  //       goodsAndService: null,
   //       costCenter: null,
   //       description: null,
   //       taxCategoryCode: 0,
@@ -85,7 +80,7 @@ module.exports = () => {
     totalCGST: 16,
     totalSGST: 16,
     totalIGST: 0,
-    totalUTGST:0,
+    totalUTGST: 0,
     lineItems: [
       {
         goodsAndService: {

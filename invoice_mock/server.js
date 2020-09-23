@@ -17,7 +17,7 @@ var postTaxHeads = require("./data/postTaxHeads");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: true }));
 
 app.get("/organizations", function (req, res) {
   console.log("/organizations");
@@ -71,12 +71,23 @@ app.get("/invoice/:id", function (req, res) {
 
 app.post("/invoice/due-date", function (req, res) {
   console.log(req.data);
-  res.status(201).send(new Date().toISOString());
+  res.status(500).send(new Date().toISOString());
 });
 
 app.post("/invoice/tax-heads", function (req, res) {
   console.log(req.body);
   res.status(201).send(postTaxHeads());
+});
+
+app.post("/invoice/approval-required", function (req, res) {
+  console.log("/invoice/approval-required ");
+  res.status(201).send(false);
+});
+
+app.post("/invoice", function (req, res) {
+  console.log("/invoice  => post request");
+  console.log(req.body.isDraft);
+  res.status(201).send();
 });
 
 app.listen(6001, () => {
