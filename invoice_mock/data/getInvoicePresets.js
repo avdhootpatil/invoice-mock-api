@@ -2,7 +2,7 @@ module.exports = () => {
   return {
     currency: "INR",
     exRate: 0,
-    costCenter: [
+    costCenters: [
       {
         name: "electronics",
         id: 1,

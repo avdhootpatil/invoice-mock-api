@@ -34,7 +34,7 @@ app.get("/presets/countries", function (req, res) {
   res.status(200).send(getCountries());
 });
 
-app.get("/presets/states", function (req, res) {
+app.get("/presets/IN/states", function (req, res) {
   console.log("/states");
   res.status(200).send(getStates());
 });

@@ -51,7 +51,7 @@ module.exports = () => {
       id: 1,
       name: "Delhi",
       salesPerson: "Samson",
-      transactionType: "Registered Business",
+      transactionType: "B2B",
       gstin: null,
       stateCode: null,
     },
