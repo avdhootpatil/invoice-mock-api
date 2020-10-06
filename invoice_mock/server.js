@@ -29,17 +29,17 @@ app.get("/invoice/presets", function (req, res) {
   res.status(200).send(getInvoicePresets());
 });
 
-app.get("/presets/countries", function (req, res) {
+app.get("/countries", function (req, res) {
   console.log("/countries");
   res.status(200).send(getCountries());
 });
 
-app.get("/presets/IN/states", function (req, res) {
+app.get("/IN/states", function (req, res) {
   console.log("/states");
   res.status(200).send(getStates());
 });
 
-app.get("/presets/currencies", function (req, res) {
+app.get("/currencies", function (req, res) {
   console.log("/currencies");
   res.status(200).send(getCurrencies());
 });
@@ -71,12 +71,33 @@ app.get("/invoice/:id", function (req, res) {
 
 app.post("/invoice/due-date", function (req, res) {
   console.log(req.data);
-  res.status(500).send(new Date().toISOString());
+  res.status(200).send("2020-10-04T06:19:17.923");
 });
 
 app.post("/invoice/tax-heads", function (req, res) {
-  console.log(req.body);
-  res.status(201).send(postTaxHeads());
+  console.log("/taxheads", req.body);
+  if (req.body.hasLUT === "YES") {
+    res.status(201).send(postTaxHeads());
+  } else {
+    res.status(201).send([
+      {
+        invoiceId: 0,
+        taxAmount: 16.2,
+        code: "SGST",
+        taxRatePart: 50.0,
+        taxType: "GST",
+        applicableOn: "ITEM",
+      },
+      {
+        invoiceId: 0,
+        taxAmount: 16.2,
+        code: "CGST",
+        taxRatePart: 50.0,
+        taxType: "GST",
+        applicableOn: "ITEM",
+      },
+    ]);
+  }
 });
 
 app.post("/invoice/approval-required", function (req, res) {

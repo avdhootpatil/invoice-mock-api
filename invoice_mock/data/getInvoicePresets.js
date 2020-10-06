@@ -2,18 +2,27 @@ module.exports = () => {
   return {
     currency: "INR",
     exRate: 0,
+    remarks: "test remark",
     costCenters: [
       {
-        name: "electronics",
         id: 1,
+        name: "Air Export",
       },
       {
-        name: "electrical",
         id: 2,
+        name: "Air Import",
       },
       {
-        name: "agriculture",
-        id: 3,
+        id: 9,
+        name: "Sea Import",
+      },
+      {
+        id: 10,
+        name: "Sea Export",
+      },
+      {
+        id: 11,
+        name: "CCL  Export",
       },
     ],
   };
