@@ -14,6 +14,6 @@ app.get("/goodsandservices", function (req, res) {
   res.status(200).send(getGoodsAndServices());
 });
 
-app.listen(6001, () => {
-  console.log("Server started at 6001");
+app.listen(51191, () => {
+  console.log("Server started at 51191");
 });
