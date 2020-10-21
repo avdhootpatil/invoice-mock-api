@@ -254,6 +254,8 @@ module.exports = () => {
       id: 120,
       creditLimit: 8.45,
       creditOnHold: 2.97,
+      isCreditLimitUnlimited: true,
+      isCreditLimitOnHoldUnlimited: true,
       customerGL: {
         id: 108,
         name: "customerGL",
@@ -274,6 +276,7 @@ module.exports = () => {
       whTaxPayableRate: 4.89,
       taxExemption: {
         certificateNo: "30998307799",
+        isExcemptionLimitUnLimited: true,
         reducedRate: 9.11,
         exemptionLimit: 8.33,
         validFrom: "2020-01-30T08:14:07",
@@ -307,7 +310,14 @@ module.exports = () => {
         organisationId: 1,
         organisationBranchId: 30,
         id: 1,
-        type: "GSTIN",
+        branch: {
+          id: 5,
+          name: "Mum",
+        },
+        type: {
+          id: 1,
+          name: "GSTIN",
+        },
         registrationNo: "51713225299",
         validFrom: "2019-11-25T21:24:24",
         validTo: "2028-09-05T04:54:17",
@@ -317,7 +327,14 @@ module.exports = () => {
         organisationId: 1,
         organisationBranchId: 92,
         id: 2,
-        type: "GSTIN",
+        branch: {
+          id: 1,
+          name: "Pun",
+        },
+        type: {
+          id: 1,
+          name: "GSTIN",
+        },
         registrationNo: "26208802799",
         validFrom: "2020-08-27T00:44:35",
         validTo: "2025-10-28T18:59:39",
@@ -327,7 +344,14 @@ module.exports = () => {
         organisationId: 1,
         organisationBranchId: 120,
         id: 3,
-        type: "GSTIN",
+        branch: {
+          id: 2,
+          name: "Ban",
+        },
+        type: {
+          id: 1,
+          name: "GSTIN",
+        },
         registrationNo: "89436973899",
         validFrom: "2021-07-01T13:26:26",
         validTo: "2027-12-26T09:10:47",

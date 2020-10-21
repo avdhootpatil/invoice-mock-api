@@ -32,6 +32,71 @@ app.get("/cities", function (req, res) {
   res.status(200).send(getCities());
 });
 
+app.put("/organisations/:id", function (req, res) {
+  console.log("name,alias updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/accountInfo", function (req, res) {
+  console.log("accountinfo saved");
+  res.status(200).send("success");
+});
+
+app.put("/organisations/:id/accountInfo", function (req, res) {
+  console.log("accountinfo saved");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/bankDetails", function (req, res) {
+  console.log("bankDetails saved");
+  res.status(200).send("success");
+});
+
+app.put("/organisations/:id/bankDetails/:id", function (req, res) {
+  console.log("bankDetails updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/contactPersons", function (req, res) {
+  console.log("contactPerson saved");
+  res.status(200).send("success");
+});
+
+app.put("/organisations/:id/contactPersons/:id", function (req, res) {
+  console.log("contactPerson updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/branchRegistration", function (req, res) {
+  console.log("branchRegistration saved");
+  res.status(200).send("success");
+});
+
+app.put("/organisations/:id/branchRegistration/:id", function (req, res) {
+  console.log("branchRegistration updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/kyc", function (req, res) {
+  console.log("kyc saved");
+  res.status(200).send("success");
+});
+
+app.put("/organisations/:id/kyc", function (req, res) {
+  console.log("kyc updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/branches", function (req, res) {
+  console.log("branch saved");
+  res.status(200).send("success");
+});
+
+app.put("/organisations/:id/branches/:id", function (req, res) {
+  console.log("branch updated");
+  res.status(200).send("success");
+});
+
 app.listen(6001, () => {
   console.log("Server started at 6001");
 });
