@@ -12,7 +12,7 @@ var getCountries = require("./data/getCountries");
 var getStates = require("./data/getStates");
 var getCities = require("./data/getCities");
 
-app.get("/organisation", function (req, res) {
+app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
   res.status(200).send(getOrganisationData());
 });
@@ -37,9 +37,15 @@ app.put("/organisations/:id", function (req, res) {
   res.status(200).send("success");
 });
 
+app.post("/organisations", function (req, res) {
+  console.log("organization saved");
+  console.log(req.body);
+  res.status(200).send({ id: 1, branch: [{ id: 1 }] });
+});
+
 app.post("/organisations/:id/accountInfo", function (req, res) {
   console.log("accountinfo saved");
-  res.status(200).send("success");
+  res.status(200).send({ id: 1 });
 });
 
 app.put("/organisations/:id/accountInfo", function (req, res) {
@@ -49,7 +55,7 @@ app.put("/organisations/:id/accountInfo", function (req, res) {
 
 app.post("/organisations/:id/bankDetails", function (req, res) {
   console.log("bankDetails saved");
-  res.status(200).send("success");
+  res.status(200).send({ id: 1 });
 });
 
 app.put("/organisations/:id/bankDetails/:id", function (req, res) {
@@ -59,7 +65,7 @@ app.put("/organisations/:id/bankDetails/:id", function (req, res) {
 
 app.post("/organisations/:id/contactPersons", function (req, res) {
   console.log("contactPerson saved");
-  res.status(200).send("success");
+  res.status(200).send({ id: 1 });
 });
 
 app.put("/organisations/:id/contactPersons/:id", function (req, res) {
@@ -69,7 +75,7 @@ app.put("/organisations/:id/contactPersons/:id", function (req, res) {
 
 app.post("/organisations/:id/branchRegistration", function (req, res) {
   console.log("branchRegistration saved");
-  res.status(200).send("success");
+  res.status(200).send({ id: 1 });
 });
 
 app.put("/organisations/:id/branchRegistration/:id", function (req, res) {
@@ -79,7 +85,7 @@ app.put("/organisations/:id/branchRegistration/:id", function (req, res) {
 
 app.post("/organisations/:id/kyc", function (req, res) {
   console.log("kyc saved");
-  res.status(200).send("success");
+  res.status(200).send({ id: 1 });
 });
 
 app.put("/organisations/:id/kyc", function (req, res) {
@@ -89,7 +95,7 @@ app.put("/organisations/:id/kyc", function (req, res) {
 
 app.post("/organisations/:id/branches", function (req, res) {
   console.log("branch saved");
-  res.status(200).send("success");
+  res.status(200).send({ id: 1 });
 });
 
 app.put("/organisations/:id/branches/:id", function (req, res) {
