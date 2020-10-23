@@ -134,6 +134,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "6155131493",
         email: "tincidunt.Donec.vitae@Donec.com",
+        isDefault: true,
       },
       {
         companyId: 3,
@@ -148,6 +149,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "7745164641",
         email: "Nullam.nisl@magnaSuspendissetristique.com",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -162,6 +164,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "5297101980",
         email: "elit.fermentum.risus@gravidanon.org",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -176,6 +179,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "1516936744",
         email: "nibh.Donec@lacus.org",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -190,6 +194,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "7931447665",
         email: "dis@massaSuspendisse.net",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -204,6 +209,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "5463161323",
         email: "eu.odio.tristique@auguescelerisquemollis.edu",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -218,6 +224,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "1703754380",
         email: "commodo@disparturient.com",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -232,6 +239,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "4585418627",
         email: "dictum@lobortisquam.edu",
+        isDefault: false,
       },
       {
         companyId: 3,
@@ -246,6 +254,7 @@ module.exports = () => {
         department: "Finance",
         phoneNumber: "3972844328",
         email: "gravida.molestie.arcu@in.org",
+        isDefault: false,
       },
     ],
     accountInfo: {
@@ -292,6 +301,7 @@ module.exports = () => {
           ifsc: "MARS123",
           swiftCode: "LOL123",
           payeeName: "Neil Armstrong",
+          isDefault: true,
         },
         {
           organisationId: 1,
@@ -302,6 +312,7 @@ module.exports = () => {
           ifsc: "MARS123",
           swiftCode: "LOL123",
           payeeName: "Elon Musk",
+          isDefault: false,
         },
       ],
     },
@@ -338,7 +349,7 @@ module.exports = () => {
         registrationNo: "26208802799",
         validFrom: "2020-08-27T00:44:35",
         validTo: "2025-10-28T18:59:39",
-        isDefault: true,
+        isDefault: false,
       },
       {
         organisationId: 1,

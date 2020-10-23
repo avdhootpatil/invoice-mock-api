@@ -63,6 +63,11 @@ app.put("/organisations/:id/bankDetails/:id", function (req, res) {
   res.status(200).send("success");
 });
 
+app.delete("/organisations/:id/bankDetails/:id", function (req, res) {
+  console.log("bankDetails deleted");
+  res.status(200).send("success");
+});
+
 app.post("/organisations/:id/contactPersons", function (req, res) {
   console.log("contactPerson saved");
   res.status(200).send({ id: 1 });
@@ -73,6 +78,11 @@ app.put("/organisations/:id/contactPersons/:id", function (req, res) {
   res.status(200).send("success");
 });
 
+app.delete("/organisations/:id/contactPersons/:id", function (req, res) {
+  console.log("contactPerson deleted");
+  res.status(200).send("success");
+});
+
 app.post("/organisations/:id/branchRegistration", function (req, res) {
   console.log("branchRegistration saved");
   res.status(200).send({ id: 1 });
@@ -80,6 +90,11 @@ app.post("/organisations/:id/branchRegistration", function (req, res) {
 
 app.put("/organisations/:id/branchRegistration/:id", function (req, res) {
   console.log("branchRegistration updated");
+  res.status(200).send("success");
+});
+
+app.delete("/organisations/:id/branchRegistration/:id", function (req, res) {
+  console.log("branchRegistration deleted");
   res.status(200).send("success");
 });
 
@@ -100,6 +115,11 @@ app.post("/organisations/:id/branches", function (req, res) {
 
 app.put("/organisations/:id/branches/:id", function (req, res) {
   console.log("branch updated");
+  res.status(200).send("success");
+});
+
+app.delete("/organisations/:id/branches/:id", function (req, res) {
+  console.log("branch deleted");
   res.status(200).send("success");
 });
 
