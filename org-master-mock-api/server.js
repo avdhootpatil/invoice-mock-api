@@ -11,6 +11,8 @@ var getOrganisationData = require("./data/getOrganisationData");
 var getCountries = require("./data/getCountries");
 var getStates = require("./data/getStates");
 var getCities = require("./data/getCities");
+var getEmployees = require("./data/getEmployees");
+var getFiscalYears = require("./data/getFiscalYears");
 
 app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
@@ -30,6 +32,16 @@ app.get("/states", function (req, res) {
 app.get("/cities", function (req, res) {
   console.log("/cities");
   res.status(200).send(getCities());
+});
+
+app.get("/employees", function (req, res) {
+  console.log("/employees");
+  res.status(200).send(getEmployees());
+});
+
+app.get("/fiscalyears", function (req, res) {
+  console.log("/fiscalyears");
+  res.status(200).send(getFiscalYears());
 });
 
 app.put("/organisations/:id", function (req, res) {
@@ -60,6 +72,14 @@ app.post("/organisations/:id/bankDetails", function (req, res) {
 
 app.put("/organisations/:id/bankDetails/:id", function (req, res) {
   console.log("bankDetails updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/bankDetails/:id/setasdefault", function (
+  req,
+  res
+) {
+  console.log("bankDetails is default");
   res.status(200).send("success");
 });
 
@@ -114,6 +134,11 @@ app.post("/organisations/:id/branches", function (req, res) {
 });
 
 app.put("/organisations/:id/branches/:id", function (req, res) {
+  console.log("branch updated");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/branches/:id/setasdefault", function (req, res) {
   console.log("branch updated");
   res.status(200).send("success");
 });
