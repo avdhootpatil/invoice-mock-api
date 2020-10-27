@@ -13,6 +13,8 @@ var getStates = require("./data/getStates");
 var getCities = require("./data/getCities");
 var getEmployees = require("./data/getEmployees");
 var getFiscalYears = require("./data/getFiscalYears");
+var getGeneralLedgers = require("./data/getGeneralLedgers");
+var getTransactionTypes = require("./data/getTransactionTypes");
 
 app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
@@ -42,6 +44,16 @@ app.get("/employees", function (req, res) {
 app.get("/fiscalyears", function (req, res) {
   console.log("/fiscalyears");
   res.status(200).send(getFiscalYears());
+});
+
+app.get("/general-ledgers", function (req, res) {
+  console.log("/general-ledgers");
+  res.status(200).send(getGeneralLedgers());
+});
+
+app.get("/transactiontypes", function (req, res) {
+  console.log("/transactiontypes");
+  res.status(200).send(getTransactionTypes());
 });
 
 app.put("/organisations/:id", function (req, res) {
