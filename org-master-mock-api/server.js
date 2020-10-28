@@ -77,26 +77,23 @@ app.put("/organisations/:id/accountInfo", function (req, res) {
   res.status(200).send("success");
 });
 
-app.post("/organisations/:id/bankDetails", function (req, res) {
-  console.log("bankDetails saved");
+app.post("/organisations/:id/banks", function (req, res) {
+  console.log("banks saved");
   res.status(200).send({ id: 1 });
 });
 
-app.put("/organisations/:id/bankDetails/:id", function (req, res) {
-  console.log("bankDetails updated");
+app.put("/organisations/:id/banks/:id", function (req, res) {
+  console.log("banks updated");
   res.status(200).send("success");
 });
 
-app.post("/organisations/:id/bankDetails/:id/setasdefault", function (
-  req,
-  res
-) {
-  console.log("bankDetails is default");
+app.post("/organisations/:id/banks/:id/setasdefault", function (req, res) {
+  console.log("banks is default");
   res.status(200).send("success");
 });
 
-app.delete("/organisations/:id/bankDetails/:id", function (req, res) {
-  console.log("bankDetails deleted");
+app.delete("/organisations/:id/banks/:id", function (req, res) {
+  console.log("banks deleted");
   res.status(200).send("success");
 });
 
