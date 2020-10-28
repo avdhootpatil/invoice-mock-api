@@ -90,7 +90,11 @@ module.exports = () => {
           name: "Product",
         },
         description: "Product Names",
-        taxCategoryCode: 440012,
+        taxCategory: {
+          id: 997214,
+          code: 997214,
+          name: "Trade services of time-share properties",
+        },
         abatement: 0,
         rcm: 0,
         costCenter: {
@@ -101,9 +105,11 @@ module.exports = () => {
         rate: 100,
         amount: 200,
         discount: 0,
-        taxRate: 18,
+        taxRate: {
+          name: "GST18",
+          rate: 18,
+        },
         cessRate: 2,
-        taxRateCode: "GST18",
         taxAmount: 32.4,
         totalAmount: 212.4,
       },
@@ -113,7 +119,11 @@ module.exports = () => {
           name: "Product",
         },
         description: "Product Names",
-        taxCategoryCode: 440013,
+        taxCategory: {
+          id: 997214,
+          code: 997214,
+          name: "Trade services of time-share properties",
+        },
         abatement: 0,
         rcm: 0,
         costCenter: {
@@ -124,7 +134,10 @@ module.exports = () => {
         rate: 100,
         amount: 200,
         discount: 0,
-        taxRate: 18,
+        taxRate: {
+          name: "GST18",
+          rate: 18,
+        },
         cessRate: 0,
         taxRateCode: "GST18",
         taxAmount: 32.4,

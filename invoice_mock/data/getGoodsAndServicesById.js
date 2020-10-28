@@ -1,20 +1,11 @@
 module.exports = () => {
-  // return {
-  //   id: 34,
-  //   name: "Items",
-  //   code: "IT",
-  //   salesPrice: 50,
-  //   abatement: 0,
-  //   taxCategoryCode: 440013,
-  //   taxRateCode: "GST18",
-  //   taxRate: 18,
-  //   cessRate: 2,
-  // };
   return {
-    id: 38,
     type: "G",
-    name: "Product1",
     code: "Pd",
+    goodsAndService: {
+      id: 1,
+      name: "Product",
+    },
     unitsOfMeasurement: {
       id: 2,
       code: "BAL",
@@ -64,5 +55,8 @@ module.exports = () => {
     costPrice: 40,
     abatement: 0,
     cessRate: 2,
+    amount: 0,
+    taxAmount: 0,
+    totalAmount: 0,
   };
 };
