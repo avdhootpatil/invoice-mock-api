@@ -9,7 +9,7 @@ app.use(cors({ origin: true }));
 
 var getInvoiceList = require("./data/getInvoiceList");
 
-app.get("/invoices", function (req, res) {
+app.get("/invoice", function (req, res) {
   console.log("/invoices");
   res.status(200).send(getInvoiceList());
 });
