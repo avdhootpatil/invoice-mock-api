@@ -26,8 +26,8 @@ app.get("/countries", function (req, res) {
   res.status(200).send(getCountries());
 });
 
-app.get("/states", function (req, res) {
-  console.log("/states");
+app.get("/countries/:id/states", function (req, res) {
+  console.log("/statesbycountryId");
   res.status(200).send(getStates());
 });
 
@@ -64,7 +64,7 @@ app.put("/organisations/:id", function (req, res) {
 app.post("/organisations", function (req, res) {
   console.log("organization saved");
   console.log(req.body);
-  res.status(200).send({ id: 1, branch: [{ id: 1 }] });
+  res.status(201).send({ id: 1, branches: [{ id: 1, name: "xyz" }] });
 });
 
 app.post("/organisations/:id/accountInfo", function (req, res) {
@@ -157,6 +157,6 @@ app.delete("/organisations/:id/branches/:id", function (req, res) {
   res.status(200).send("success");
 });
 
-app.listen(6001, () => {
-  console.log("Server started at 6001");
+app.listen(6002, () => {
+  console.log("Server started at 6002");
 });
