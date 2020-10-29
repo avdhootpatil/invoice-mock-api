@@ -323,7 +323,7 @@ module.exports = () => {
         id: 1,
         branch: {
           id: 5,
-          name: "Mum",
+          branchName: "Mum",
         },
         type: {
           id: 1,
@@ -340,7 +340,7 @@ module.exports = () => {
         id: 2,
         branch: {
           id: 1,
-          name: "Pun",
+          branchName: "Pun",
         },
         type: {
           id: 1,
@@ -357,7 +357,7 @@ module.exports = () => {
         id: 3,
         branch: {
           id: 2,
-          name: "Ban",
+          branchName: "Ban",
         },
         type: {
           id: 1,
