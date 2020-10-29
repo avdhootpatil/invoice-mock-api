@@ -108,6 +108,11 @@ app.post("/invoice/approval-required", function (req, res) {
 app.post("/invoice", function (req, res) {
   console.log("/invoice  => post request");
   console.log(req.body.isDraft);
+  res.status(201).send({ id: 1 });
+});
+
+app.put("/invoice/:id", function (req, res) {
+  console.log("/invoice  => put request");
   res.status(201).send();
 });
 

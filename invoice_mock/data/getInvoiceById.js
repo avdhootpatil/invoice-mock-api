@@ -43,6 +43,7 @@ module.exports = () => {
   // };
 
   return {
+    id: 1,
     customer: {
       id: 1,
       name: "Soft Pvt. Limited",

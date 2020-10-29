@@ -2,10 +2,8 @@ module.exports = () => {
   return {
     type: "G",
     code: "Pd",
-    goodsAndService: {
-      id: 1,
-      name: "Product",
-    },
+    id: 1,
+    name: "Product",
     unitsOfMeasurement: {
       id: 2,
       code: "BAL",
