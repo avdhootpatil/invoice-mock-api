@@ -279,10 +279,16 @@ module.exports = () => {
       receivableCreditPeriodInDays: 8,
       payableCreditPeriodInDays: 65,
       fiscalYear: "108",
-      whTaxReceivableCode: "ABC",
-      whTaxReceivableRate: 4.82,
-      whTaxPayableCode: "DEF",
-      whTaxPayableRate: 4.89,
+      whTaxReceivable: {
+        id: 1,
+        name: "TDSR",
+      },
+      whTaxPayable: {
+        id: 1,
+        name: "TDSR",
+      },
+      whTaxReceivableRate: 0.0,
+      whTaxPayableRate: 0.0,
       taxExemption: {
         certificateNo: "30998307799",
         isExcemptionLimitUnLimited: true,

@@ -15,6 +15,8 @@ var getEmployees = require("./data/getEmployees");
 var getFiscalYears = require("./data/getFiscalYears");
 var getGeneralLedgers = require("./data/getGeneralLedgers");
 var getTransactionTypes = require("./data/getTransactionTypes");
+var getWhTaxCodes = require("./data/getWhTaxCodes");
+var getRegistrationTypes = require("./data/getRegistrationTypes");
 
 app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
@@ -54,6 +56,16 @@ app.get("/general-ledgers", function (req, res) {
 app.get("/transactiontypes", function (req, res) {
   console.log("/transactiontypes");
   res.status(200).send(getTransactionTypes());
+});
+
+app.get("/registrationtypes", function (req, res) {
+  console.log("/registrationtypes");
+  res.status(200).send(getRegistrationTypes());
+});
+
+app.get("/whtaxcodes", function (req, res) {
+  console.log("/whtaxcodes");
+  res.status(200).send(getWhTaxCodes());
 });
 
 app.put("/organisations/:id", function (req, res) {
