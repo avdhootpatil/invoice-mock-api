@@ -17,6 +17,7 @@ var getGeneralLedgers = require("./data/getGeneralLedgers");
 var getTransactionTypes = require("./data/getTransactionTypes");
 var getWhTaxCodes = require("./data/getWhTaxCodes");
 var getRegistrationTypes = require("./data/getRegistrationTypes");
+var getDocumentTypes = require("./data/getDocumentTypes");
 
 app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
@@ -66,6 +67,11 @@ app.get("/registrationtypes", function (req, res) {
 app.get("/whtaxcodes", function (req, res) {
   console.log("/whtaxcodes");
   res.status(200).send(getWhTaxCodes());
+});
+
+app.get("/documenttypes", function (req, res) {
+  console.log("/documenttypes");
+  res.status(200).send(getDocumentTypes());
 });
 
 app.put("/organisations/:id", function (req, res) {
@@ -166,6 +172,26 @@ app.post("/organisations/:id/branches/:id/setasdefault", function (req, res) {
 
 app.delete("/organisations/:id/branches/:id", function (req, res) {
   console.log("branch deleted");
+  res.status(200).send("success");
+});
+
+app.post("/organisations/:id/attachments", function (req, res) {
+  console.log("document saved");
+  res.status(200).send({
+    id: 1,
+    url:
+      "https://www.google.com/search?q=pdf+logo&sxsrf=ALeKk010pU-4eYCPdojDIWELFSNb8ShAyw:1604408161319&tbm=isch&source=iu&ictx=1&fir=1ELdRA6RsQC3lM%252CL_BnzsMbORazMM%252C_&vet=1&usg=AI4_-kRZ5llGXVsncbuBF_jEdC0LcFojuQ&sa=X&ved=2ahUKEwj-w56UtubsAhWVheYKHWKYC0AQ9QF6BAgKEFc&biw=968&bih=696#imgrc=1ELdRA6RsQC3lM",
+    name: "AOA",
+  });
+});
+
+app.put("/organisations/:id/attachments/:id", function (req, res) {
+  console.log("document updated");
+  res.status(200).send("success");
+});
+
+app.delete("/organisations/:id/attachments/:id", function (req, res) {
+  console.log("document deleted");
   res.status(200).send("success");
 });
 
