@@ -14,6 +14,11 @@ app.get("/organisations", function (req, res) {
   res.status(200).send(getOrgMasters());
 });
 
+app.delete("/organisations/:id", function (req, res) {
+  console.log("/organisations/:id");
+  res.status(200).send({ message: "deleted" });
+});
+
 app.listen(6001, () => {
   console.log("Server started at 6001");
 });
