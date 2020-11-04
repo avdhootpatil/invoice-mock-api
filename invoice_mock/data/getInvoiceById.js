@@ -84,6 +84,8 @@ module.exports = () => {
     totalSGST: 16,
     totalIGST: 0,
     totalUTGST: 0,
+    isRounding: true,
+    roundingAmount: 212,
     lineItems: [
       {
         goodsAndService: {
