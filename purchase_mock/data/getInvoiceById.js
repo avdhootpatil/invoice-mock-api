@@ -43,7 +43,7 @@ module.exports = () => {
   // };
 
   return {
-    id:1,
+    id: 1,
     customer: {
       id: 1,
       name: "Soft Pvt. Limited",
@@ -56,17 +56,17 @@ module.exports = () => {
       gstin: null,
       stateCode: null,
     },
-    "purchaseRefNo": "1",
-    "purchaseRefDate": "2020-11-09T00:00:00",
-    "vendorBillNo": "2",
-    "vendorBillDate": "2020-10-16T00:00:00",
-    "dueDate": "2020-10-16T00:00:00",
-    "currency": {
-      "id": 241,
-      "code": "INR",
-      "name": null,
-      "currencyCode": null
-  },
+    purchaseRefNo: "1",
+    purchaseRefDate: "2020-11-09T00:00:00",
+    vendorBillNo: "2",
+    vendorBillDate: "2020-10-16T00:00:00",
+    dueDate: "2020-10-16T00:00:00",
+    currency: {
+      id: 241,
+      code: "INR",
+      name: null,
+      currencyCode: null,
+    },
 
     // dueDate: "2020-10-02T00:00:00",
     // invoiceDate: "2020-10-04T06:19:17.923",
@@ -86,7 +86,7 @@ module.exports = () => {
       // number: "MUM/001/2020",
       id: 1,
       number: "A123G",
-      orgName: "sketch ko"
+      orgName: "sketch ko",
     },
     salesPerson: null,
     // "isRounding": true,
@@ -94,9 +94,9 @@ module.exports = () => {
 
     hasLUT: "NO",
     // amount: 574.0,
-    isRounding:false,
+    isRounding: false,
     amount: 67,
-    roundingAmount:66.94,
+    roundingAmount: 66.94,
     taxableAmount: 58,
     remarks: "Terms and Conditions",
     totalCESS: 0.94,
@@ -104,31 +104,31 @@ module.exports = () => {
     totalSGST: 4.57,
     totalIGST: 0,
     totalUTGST: 0,
-    "totalWHTaxAmount": 1.16,
+    totalWHTaxAmount: 1.16,
     lineItems: [
       {
         goodsAndService: {
           id: 1,
           name: "Product",
         },
-        "generalLedger": {
+        generalLedger: {
           code: "ED00000343",
           group: "P",
           id: 5364,
           name: "Test Shreyank-E",
-          type: "A"
-      },
+          type: "A",
+        },
         description: "Product Names",
         taxCategory: {
           code: 997214,
           id: 997214,
-          name: "Trade services of time-share properties"
+          name: "Trade services of time-share properties",
         },
         abatement: 2,
         rcm: 10,
         costCenter: {
           id: 2,
-          name: "Air Import"
+          name: "Air Import",
         },
         quantity: 1,
         rate: 50,
@@ -136,22 +136,22 @@ module.exports = () => {
         discount: 2,
         taxRate: {
           name: "GST18",
-          rate: 18
+          rate: 18,
         },
         cessRate: 2,
         // taxRateCode: "GST18",
         taxAmount: 9.408,
         totalAmount: 56.45,
-        "uom": "BAL",
+        uom: "BAL",
       },
       {
         goodsAndService: null,
-        generalLedger:{
+        generalLedger: {
           code: "ED00000343",
           group: "P",
           id: 5364,
           name: "Test Shreyank-E",
-          type: "A"
+          type: "A",
         },
         description: "Product NamesGL",
         taxCategory: null,
@@ -166,7 +166,7 @@ module.exports = () => {
           isActive: true,
           name: "GST5",
           rate: 5,
-          validFrom: "0001-01-01T00:00:00"
+          validFrom: "0001-01-01T00:00:00",
         },
         cessRate: 0,
         // taxRateCode: "GST18",
@@ -174,21 +174,58 @@ module.exports = () => {
         totalAmount: 10.5,
       },
     ],
-    attachments : [
-      {name : "file1.pdf", url : "blob:http://localhost:4000/f0293c8e-c151-47fd-b22b-b180483608df", id:1, purchaseId:12 },
-      {name : "image.jpg", url : "blob:http://localhost:4000/808ffc25-71cb-4b1f-852c-a8170d75f03f", id:2, purchaseId:12 }
+    attachments: [
+      {
+        name: "file1.pdf",
+        url: "blob:http://localhost:4000/f0293c8e-c151-47fd-b22b-b180483608df",
+        id: 1,
+        purchaseId: 12,
+      },
+      {
+        name: "image.jpg",
+        url: "blob:http://localhost:4000/808ffc25-71cb-4b1f-852c-a8170d75f03f",
+        id: 2,
+        purchaseId: 12,
+      },
     ],
-    "whTax": {
-      "name":"94C",
-      "code": "94C",
-      "purchaseID": 37,
-      "srNo": 1,
-      "taxID": 2,
-      "taxPerc": 4.000,
-      "taxAmount": 20.12800,
-      "taxableAmount": 503.20
-  }
+    whTax: {
+      name: "94C",
+      code: "94C",
+      purchaseID: 37,
+      srNo: 1,
+      taxID: 2,
+      taxPerc: 4.0,
+      taxAmount: 20.128,
+      taxableAmount: 503.2,
+    },
+    apprApplied: true,
+    manualDraft: true,
+    taxHeads: [
+      {
+        invoiceId: 0,
+        taxAmount: 16.2,
+        code: "SGST",
+        taxRatePart: 50.0,
+        taxType: "GST",
+        applicableOn: "ITEM",
+      },
+      {
+        invoiceId: 0,
+        taxAmount: 16.2,
+        code: "CGST",
+        taxRatePart: 50.0,
+        taxType: "GST",
+        applicableOn: "ITEM",
+      },
+      // {
+      //   invoiceId: 207,
+      //   id: 0,
+      //   taxAmount: 81,
+      //   code: "IGST",
+      //   taxRatePart: 100,
+      //   taxType: "GST",
+      //   applicableOn: null,
+      // },
+    ],
   };
 };
-
-
