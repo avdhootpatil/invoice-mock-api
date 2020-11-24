@@ -18,6 +18,7 @@ var getTransactionTypes = require("./data/getTransactionTypes");
 var getWhTaxCodes = require("./data/getWhTaxCodes");
 var getRegistrationTypes = require("./data/getRegistrationTypes");
 var getDocumentTypes = require("./data/getDocumentTypes");
+var getCurrencies = require("./data/getCurrencies");
 
 app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
@@ -47,6 +48,11 @@ app.get("/employees", function (req, res) {
 app.get("/fiscalyears", function (req, res) {
   console.log("/fiscalyears");
   res.status(200).send(getFiscalYears());
+});
+
+app.get("/currencies", function (req, res) {
+  console.log("/currencies");
+  res.status(200).send(getCurrencies());
 });
 
 app.get("/general-ledgers", function (req, res) {
