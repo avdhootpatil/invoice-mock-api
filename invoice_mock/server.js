@@ -34,7 +34,7 @@ app.get("/countries", function (req, res) {
   res.status(200).send(getCountries());
 });
 
-app.get("/IN/states", function (req, res) {
+app.get("/countries/IN/states", function (req, res) {
   console.log("/states");
   res.status(200).send(getStates());
 });
@@ -102,7 +102,7 @@ app.post("/invoice/tax-heads", function (req, res) {
 
 app.post("/invoice/approval-required", function (req, res) {
   console.log("/invoice/approval-required ");
-  res.status(201).send(false);
+  res.status(201).send(true);
 });
 
 app.post("/invoice", function (req, res) {

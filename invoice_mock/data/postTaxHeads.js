@@ -20,7 +20,7 @@ module.exports = () => {
       invoiceId: 0,
       taxAmount: 0.0,
       code: "GST_ZEROED",
-      taxRatePart: 0.0,
+      taxRatePart: 0,
       taxType: "GST",
       applicableOn: "ITEM",
     },
