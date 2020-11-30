@@ -90,12 +90,12 @@ app.get("/taxgroups/VAT/tax-rates", function (req, res) {
   res.status(200).send(getTaxRatesFromTaxGroup());
 });
 
-app.get("/general-ledgers", function (req, res){
+app.get("/general-ledgers", function (req, res) {
   console.log("/general-ledgers");
   res.status(200).send(getGeneralLedgers());
 });
 
-app.get("/wh-taxes", function (req, res){
+app.get("/wh-taxes", function (req, res) {
   console.log("/wh-taxes");
   res.status(200).send(getwhTaxes());
 });
@@ -157,7 +157,7 @@ app.post("/purchase/tax-heads", function (req, res) {
 
 app.post("/purchase/approval-required", function (req, res) {
   console.log("/purchase/approval-required ");
-  res.status(201).send(false);
+  res.status(201).send(true);
 });
 
 // purchase/approval
@@ -170,7 +170,7 @@ app.post("/purchase", function (req, res) {
   console.log("/purchase  => post request");
   // console.log(req.body.pl);
   // if(req.body.placeOfSupply.name === "maharashtra")
-  res.status(201).send({id : 1});
+  res.status(201).send({ id: 1 });
 });
 
 app.listen(6002, () => {

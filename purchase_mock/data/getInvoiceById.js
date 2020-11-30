@@ -198,8 +198,8 @@ module.exports = () => {
       taxAmount: 20.128,
       taxableAmount: 503.2,
     },
-    apprApplied: true,
-    manualDraft: true,
+    apprApplied: false,
+    manualDraft: false,
     taxHeads: [
       {
         invoiceId: 0,
