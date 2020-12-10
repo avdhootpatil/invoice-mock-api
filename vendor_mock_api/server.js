@@ -22,6 +22,7 @@ var getCurrencies = require("./data/getCurrencies");
 var getBranchById = require("./data/getBranchById");
 const getwhTaxes = require("./data/getWhTaxes");
 var getPurchaseList = require("./data/getPurchaseList");
+var postTaxHeads = require("./data/postTaxHeads");
 
 app.get("/organizations", function (req, res) {
   console.log("/organizations");
@@ -96,6 +97,11 @@ app.get("/wh-taxes", function (req, res) {
 app.get("/purchase", function (req, res) {
   console.log("/purchase");
   res.status(200).send(getPurchaseList());
+});
+
+app.post("/vendor-payments/tax-heads", function (req, res) {
+  console.log("/taxheads", req.body);
+  res.status(201).send(postTaxHeads());
 });
 
 app.listen(6006, () => {

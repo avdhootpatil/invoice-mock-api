@@ -6,7 +6,7 @@ module.exports = () => {
       gstin: "27AAACI112114Z",
       transactionType: { id: 1, code: "B2B", name: "Registered" },
       stateCode: "MH",
-      name: "mumbai",
+      branchName: "mumbai",
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ module.exports = () => {
       gstin: "27AAACI112114Z",
       transactionType: { id: 1, code: "B2B", name: "Registered" },
       stateCode: "DL",
-      name: "Delhi",
+      branchName: "Delhi",
     },
     {
       id: 3,
@@ -22,11 +22,11 @@ module.exports = () => {
       gstin: "27AAACI112114Z",
       transactionType: { id: 3, code: "B2C", name: "Unregistered" },
       stateCode: "MH",
-      name: "Jinuha",
+      branchName: "Jinuha",
     },
     {
       id: 4,
-      name: "Mumbai",
+      branchName: "Mumbai",
       salesPerson: null,
       transactionType: { id: 2, code: "B2B", name: "Composition" },
       gstin: "27AAACI112114Z",
@@ -34,7 +34,7 @@ module.exports = () => {
     },
     {
       id: 5,
-      name: "New delhi",
+      branchName: "New delhi",
       salesPerson: null,
       transactionType: { id: 2, code: "B2B", name: "Composition" },
       gstin: "27AAACI112114Z",
@@ -42,7 +42,7 @@ module.exports = () => {
     },
     {
       id: 6,
-      name: "London",
+      branchName: "London",
       salesPerson: null,
       transactionType: { id: 2, code: "SEZ", name: "Special Economic Zone" },
       gstin: "27AAACI112114Z",

@@ -6,7 +6,7 @@ module.exports = () => {
       gstin: "SJHDG68778",
       transactionType: { id: 1, code: "B2B", name: "Registered" },
       stateCode: "MH",
-      name: "pune",
+      branchName: "pune",
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ module.exports = () => {
       gstin: "SJHDG68778",
       transactionType: { id: 2, code: "SEZ", name: "special economic zone" },
       stateCode: "GJ",
-      name: "mumbai",
+      branchName: "mumbai",
     },
     {
       id: 3,
@@ -22,11 +22,11 @@ module.exports = () => {
       gstin: "SJHDG68778",
       transactionType: { id: 2, code: "EXP", name: "Exports" },
       stateCode: "UP",
-      name: "nashik",
+      branchName: "nashik",
     },
     {
       id: 4,
-      name: "Delhi",
+      branchName: "Delhi",
       salesPerson: null,
       transactionType: { id: 1, code: "B2B", name: "Registered" },
       gstin: null,

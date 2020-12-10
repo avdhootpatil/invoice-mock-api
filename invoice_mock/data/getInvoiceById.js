@@ -7,7 +7,7 @@ module.exports = () => {
     },
     customerBranch: {
       id: 1,
-      name: "Delhi",
+      branchName: "Delhi",
       salesPerson: "Samson",
       transactionType: { id: 1, code: "B2B", name: "Registered" },
       gstin: null,

@@ -43,7 +43,6 @@ module.exports = () => {
       vendorName: "Hass",
       amount: 230,
       payment: 100.0,
-      billOrAccount: "bill",
     },
     {
       id: 6,
@@ -52,7 +51,6 @@ module.exports = () => {
       vendorName: "force india",
       amount: 433,
       payment: 100.0,
-      billOrAccount: "bill",
     },
     {
       id: 7,
@@ -61,7 +59,6 @@ module.exports = () => {
       vendorName: "Williams",
       amount: 794,
       payment: 100.0,
-      billOrAccount: "bill",
     },
   ];
 };

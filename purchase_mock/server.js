@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
 
-app.get("/organizations", function (req, res) {
+app.get("/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
 });
@@ -65,7 +65,7 @@ app.get("/goodsandservices/:id", function (req, res) {
   res.status(200).send(getGoodsAndServicesById());
 });
 
-app.get("/organizations/:id/branches", function (req, res) {
+app.get("/organisations/:id/branches", function (req, res) {
   console.log("/getBranchById");
   res.status(200).send(getBranchById());
 });

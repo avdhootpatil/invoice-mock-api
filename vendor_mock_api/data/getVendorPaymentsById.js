@@ -124,6 +124,8 @@ module.exports = () => {
       amount: 20.0,
       vp_id: 0,
       taxAmount: 3.6,
+      totalCGST: 1.8,
+      totalSGST: 1.8,
       taxRate: {
         name: "GST18",
         rate: 18,
@@ -159,9 +161,17 @@ module.exports = () => {
     },
     attachments: [
       {
-        id: 0,
-        name: null,
-        url: null,
+        id: 9,
+        name: "abc.png",
+        url:
+          "http://127.0.0.1:10000/devstoreaccount1/invoice/142/Screenshot(6).png",
+        vp_id: 0,
+      },
+      {
+        id: 10,
+        name: "xyz.png",
+        url:
+          "http://127.0.0.1:10000/devstoreaccount1/invoice/142/Screenshot(5).png",
         vp_id: 0,
       },
     ],
