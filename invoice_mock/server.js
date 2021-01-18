@@ -24,9 +24,14 @@ app.get("/organisations", function (req, res) {
   res.status(200).send(getOrganizations());
 });
 
-app.get("/invoice/presets", function (req, res) {
+app.get("/cost-centers", function (req, res) {
   console.log("/invoice presets");
   res.status(200).send(getInvoicePresets());
+});
+
+app.get("/remarks", function (req, res) {
+  console.log("/remarks");
+  res.status(200).send("remark test");
 });
 
 app.get("/countries", function (req, res) {

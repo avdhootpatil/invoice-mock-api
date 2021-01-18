@@ -61,17 +61,19 @@ module.exports = () => {
         },
         quantity: 10,
         rate: 50,
-        amount: 500,
-        discount: 0,
+        amountFC: 500,
+        amountLC: 500,
+        discountFC: 0,
+        discountLC: 0,
         taxRate: {
           name: "GST18",
           rate: 18,
         },
         // cessRate: 0,
-        taxAmount: 81,
-        totalAmount: 531,
-        invoiceTaxBifurications: [
-          // {
+        taxAmountFC: 81,
+        totalAmountFC: 531,
+        taxBifurcation: [
+          // {cd
           //   invoiceId: 1,
           //   ItemId: 1,
           //   Tax_Group: "GST",
@@ -179,7 +181,7 @@ module.exports = () => {
       //   applicableOn: null,
       // },
     ],
-    apprApplied: true,
+    isApprovalApplied: true,
     manualDraft: true,
   };
 };
