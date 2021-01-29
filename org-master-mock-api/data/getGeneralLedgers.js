@@ -2,7 +2,8 @@ module.exports = () => {
   return [
     {
       id: "31",
-      name: "costGL1",
+      name:
+        "costGL1 sdfsdf sdfg syidfg sdiofygsd kfgsdkfjgsdf ksdghf ksdjfg kjh",
       group: "group1",
       type: "expence",
       code: "A123B23",

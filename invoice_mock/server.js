@@ -76,7 +76,7 @@ app.get("/invoice/:id", function (req, res) {
 
 app.post("/invoice/due-date", function (req, res) {
   console.log(req.data);
-  res.status(200).send("2020-10-04T06:19:17.923");
+  res.status(200).send("2020-10-10T06:19:17.923");
 });
 
 app.post("/invoice/tax-heads", function (req, res) {

@@ -105,7 +105,7 @@ module.exports = () => {
       telePhone: "123456",
       fax: "8734",
       transactionType: { id: 2, code: "EXP", name: "Exports" },
-      isDefault: true,
+      isDefault: false,
     },
     {
       companyId: 0,
@@ -141,7 +141,7 @@ module.exports = () => {
       fax: "8734",
       transactionType: { id: 1, code: "B2B", name: "Registered" },
       gstin: null,
-      isDefault: true,
+      isDefault: false,
     },
   ];
 };
