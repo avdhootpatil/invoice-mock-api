@@ -1,5 +1,6 @@
 module.exports = () => {
   return {
+    applicableTax: "GST",
     id: 1,
     customer: {
       id: 1,
@@ -32,13 +33,14 @@ module.exports = () => {
     salesPerson: null,
     hasLUT: "No",
     amount: 531,
-    taxableAmount: 450,
+    taxableAmountFC: 450,
     remarks: null,
     totalCESS: 0,
     totalCGST: 0,
     totalSGST: 0,
     totalIGST: 81,
     totalUTGST: 0,
+    totalVAT: 0,
     isRounding: false,
     roundingAmount: 531,
     lineItems: [
@@ -53,7 +55,7 @@ module.exports = () => {
           code: 997214,
           name: "Trade services of time-share properties",
         },
-        // abatement: 10,
+        abatement: 0,
         rcm: 0,
         costCenter: {
           id: 1,
@@ -69,7 +71,7 @@ module.exports = () => {
           name: "GST18",
           rate: 18,
         },
-        // cessRate: 0,
+        cessRate: 0,
         taxAmountFC: 81,
         totalAmountFC: 531,
         taxBifurcation: [
