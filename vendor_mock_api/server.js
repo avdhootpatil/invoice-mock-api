@@ -99,9 +99,19 @@ app.get("/purchase", function (req, res) {
   res.status(200).send(getPurchaseList());
 });
 
+app.post("/retrievebills", function (req, res) {
+  console.log("/retrievebills");
+  res.status(200).send(getPurchaseList());
+});
+
 app.post("/vendor-payments/tax-heads", function (req, res) {
   console.log("/taxheads", req.body);
   res.status(201).send(postTaxHeads());
+});
+
+app.post("/vendor-payments", function (req, res) {
+  console.log("/vendor-payments", req.body);
+  res.status(201).send({ message: "successfully posted" });
 });
 
 app.listen(6006, () => {

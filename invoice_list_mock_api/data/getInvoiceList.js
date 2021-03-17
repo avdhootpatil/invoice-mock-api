@@ -7,6 +7,7 @@ module.exports = () => {
       customerName: "ferrari",
       amountFC: 1000,
       amountLC: 100,
+      currency: "INR",
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ module.exports = () => {
       customerName: "Maclaren",
       amountFC: 198,
       amountLC: 100,
+      currency: "INR",
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ module.exports = () => {
       customerName: "Mercedes",
       amountFC: 200,
       amountLC: 100,
+      currency: "INR",
     },
     {
       id: 4,
@@ -31,6 +34,7 @@ module.exports = () => {
       customerName: "Renault",
       amountFC: 300,
       amountLC: 100,
+      currency: "INR",
     },
     {
       id: 5,
@@ -39,6 +43,7 @@ module.exports = () => {
       customerName: "Hass",
       amountFC: 350,
       amountLC: 100,
+      currency: "INR",
     },
     {
       id: 6,
@@ -47,6 +52,7 @@ module.exports = () => {
       customerName: "force india",
       amountFC: 450,
       amountLC: 100,
+      currency: "INR",
     },
     {
       id: 7,
@@ -55,6 +61,7 @@ module.exports = () => {
       customerName: "Williams",
       amountFC: 150,
       amountLC: 100,
+      currency: "INR",
     },
   ];
 };
