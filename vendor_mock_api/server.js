@@ -23,8 +23,11 @@ var getBranchById = require("./data/getBranchById");
 const getwhTaxes = require("./data/getWhTaxes");
 var getPurchaseList = require("./data/getPurchaseList");
 var postTaxHeads = require("./data/postTaxHeads");
+var getChequeStocks = require("./data/getChequeStocks");
+const getLocations = require("./data/getLocations");
+const getAnnexures = require("./data/getAnnexures");
 
-app.get("/organizations", function (req, res) {
+app.get("/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
 });
@@ -39,9 +42,24 @@ app.get("/vendorpayments/:id", function (req, res) {
   res.status(200).send(getVendorePaymentsById());
 });
 
-app.get("/paymentmodes", function (req, res) {
+app.get("/presets/paymentmodes", function (req, res) {
   console.log("/modeofpayments");
   res.status(200).send(getModeOfPayments());
+});
+
+app.get("/presets/chequestocks/:id", function (req, res) {
+  console.log("/modeofpayments");
+  res.status(200).send(getChequeStocks());
+});
+
+app.get("/presets/locations", function (req, res) {
+  console.log("/locations");
+  res.status(200).send(getLocations());
+});
+
+app.get("/presets/annexures", function (req, res) {
+  console.log("/annexures");
+  res.status(200).send(getAnnexures());
 });
 
 app.get("/general-ledgers", function (req, res) {
@@ -59,7 +77,7 @@ app.get("/countries/IN/tax-Categories", function (req, res) {
   res.status(200).send(getTaxCategories());
 });
 
-app.get("/organizations/:id/branches", function (req, res) {
+app.get("/organisations/:id/branches", function (req, res) {
   console.log("/getBranchById");
   res.status(200).send(getBranchById());
 });
@@ -99,17 +117,17 @@ app.get("/purchase", function (req, res) {
   res.status(200).send(getPurchaseList());
 });
 
-app.post("/retrievebills", function (req, res) {
+app.post("/vendorpayments/retrieve-bills", function (req, res) {
   console.log("/retrievebills");
   res.status(200).send(getPurchaseList());
 });
 
-app.post("/vendor-payments/tax-heads", function (req, res) {
+app.post("/vendorpayments/tax-heads", function (req, res) {
   console.log("/taxheads", req.body);
   res.status(201).send(postTaxHeads());
 });
 
-app.post("/vendor-payments", function (req, res) {
+app.post("/vendorpayments", function (req, res) {
   console.log("/vendor-payments", req.body);
   res.status(201).send({ message: "successfully posted" });
 });
