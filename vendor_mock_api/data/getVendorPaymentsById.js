@@ -35,9 +35,9 @@ module.exports = () => {
     exRate: 0.0,
     remarks: null,
     totalBankCharges: 23.6,
-    paidToVendor: 282.0,
+    // paidToVendor: 282.0,
     debitToVendor: 280.0,
-    IsWHTaxApplicable: false,
+    isWHTaxApplicable: false,
     totalWHTaxAmount: 2.0,
     creditToBank: 305.6,
     isRounding: false,
@@ -176,7 +176,7 @@ module.exports = () => {
           },
         },
       ],
-    attachments: [
+    voucherAttachments: [
       {
         id: 9,
         name: "abc.png",
