@@ -87,95 +87,52 @@ module.exports = () => {
         paymentFC: 10,
       },
     ],
-    bankTaxCharges:
-      // {
-      //   id: 0,
-      //   refNo: null,
-      //   refDate: "0001-01-01T00:00:00",
-      //   amount: 20.0,
-      //   vp_id: 0,
-      //   taxAmount: 3.6,
-      //   totalCGST: 1.8,
-      //   totalSGST: 1.8,
-      //   taxRate: {
-      //     name: "GST18",
-      //     rate: 18,
-      //   },
-      //   category: {
-      //     id: "1202",
-      //     name: "67890-EFBHS",
-      //     code: "05690",
-      //     taxRate: {
-      //       id: "21",
-      //       name: "GST18",
-      //     },
-      //   },
-      //   totalAmount: 23.6,
-      //   taxHeads: [
-      //     {
-      //       invoiceId: 0,
-      //       taxAmount: 16.2,
-      //       code: "SGST",
-      //       taxRatePart: 50.0,
-      //       taxType: "GST",
-      //       applicableOn: "ITEM",
-      //     },
-      //     {
-      //       invoiceId: 0,
-      //       taxAmount: 16.2,
-      //       code: "CGST",
-      //       taxRatePart: 50.0,
-      //       taxType: "GST",
-      //       applicableOn: "ITEM",
-      //     },
-      //   ],
-      // },
-      [
-        {
-          voucherId: 0,
-          amount: 20.0,
-          taxGroup: " GST",
-          taxType: "CGST",
-          baseRate: 50,
-          taxAmountFC: 1.8,
-          availCredit: false,
+    bankTaxCharges: [
+      {
+        voucherId: 0,
+        amount: 20.0,
+        taxGroup: " GST",
+        taxType: "CGST",
+        baseRate: 50,
+        taxAmountFC: 1.8,
+        availCredit: false,
+        taxRate: {
+          name: "GST18",
+          rate: 18,
+        },
+        category: {
+          id: "1202",
+          name: "67890-EFBHS",
+          code: "05690",
           taxRate: {
+            id: "21",
             name: "GST18",
-            rate: 18,
-          },
-          category: {
-            id: "1202",
-            name: "67890-EFBHS",
-            code: "05690",
-            taxRate: {
-              id: "21",
-              name: "GST18",
-            },
           },
         },
-        {
-          voucherId: 0,
-          amount: 20.0,
-          taxGroup: " GST",
-          taxType: "SGST",
-          baseRate: 50,
-          taxAmountFC: 1.8,
-          availCredit: false,
+      },
+      {
+        voucherId: 0,
+        amount: 20.0,
+        taxGroup: " GST",
+        taxType: "SGST",
+        baseRate: 50,
+        taxAmountFC: 1.8,
+        availCredit: false,
+        taxRate: {
+          name: "GST18",
+          rate: 18,
+        },
+        category: {
+          id: "1202",
+          name: "67890-EFBHS",
+          code: "05690",
           taxRate: {
+            id: "21",
             name: "GST18",
-            rate: 18,
-          },
-          category: {
-            id: "1202",
-            name: "67890-EFBHS",
-            code: "05690",
-            taxRate: {
-              id: "21",
-              name: "GST18",
-            },
           },
         },
-      ],
+      },
+    ],
     voucherAttachments: [
       {
         id: 9,
