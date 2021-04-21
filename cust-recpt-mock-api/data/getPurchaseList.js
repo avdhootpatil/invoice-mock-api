@@ -14,15 +14,15 @@ module.exports = () => {
       invoiceAmountFC: 2400.0,
       receiptFC: 1200.0,
       lineItemWHTaxes: [
-        {
-          id: 0,
-          voucherId: 0,
-          taxId: 32,
-          taxCode: "94C",
-          taxRate: 10.0,
-          taxableAmountFC: 200.0,
-          taxAmountFC: 20,
-        },
+        // {
+        //   id: 0,
+        //   voucherId: 0,
+        //   taxId: 32,
+        //   taxCode: "94C",
+        //   taxRate: 10.0,
+        //   taxableAmountFC: 200.0,
+        //   taxAmountFC: 20,
+        // },
       ],
     },
   ];

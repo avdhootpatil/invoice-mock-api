@@ -27,6 +27,8 @@ module.exports = () => {
     bankTaxRate: 18.0,
     bankTaxGroup: "GST",
     bankAmount: 2000.0,
+    debitToBank: 2400,
+    creditToCustomer: 560,
     amountReceived: 2400.0,
     creditToCustomer: 0.0,
     debitToBank: 0.0,
@@ -36,6 +38,7 @@ module.exports = () => {
     roundingAmount: 0.0,
     bankReferenceNo: "",
     bankReferenceDate: undefined,
+
     voucherItems: [
       {
         location: {

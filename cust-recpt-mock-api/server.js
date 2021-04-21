@@ -37,7 +37,7 @@ app.get("/jobs", function (req, res) {
   res.status(200).send(getJobs());
 });
 
-app.get("/customerreceipt/:id", function (req, res) {
+app.get("/customerreceipts/:id", function (req, res) {
   console.log("/vendorpayments");
   res.status(200).send(getCustomerReceiptById());
 });
