@@ -127,9 +127,9 @@ app.post("/vendorpayments/tax-heads", function (req, res) {
   res.status(201).send(postTaxHeads());
 });
 
-app.post("/vendorpayments", function (req, res) {
-  console.log("/vendor-payments", req.body);
-  res.status(201).send({ message: "successfully posted" });
+app.post("/customerreceipts", function (req, res) {
+  console.log("/customer-receipts", req.body);
+  res.status(201).send({ id: 1 });
 });
 
 app.listen(6006, () => {
