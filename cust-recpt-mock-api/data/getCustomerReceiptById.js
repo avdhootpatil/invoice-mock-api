@@ -37,7 +37,7 @@ module.exports = () => {
     isRounding: false,
     roundingAmount: 0.0,
     bankReferenceNo: "",
-    bankReferenceDate: undefined,
+    bankReferenceDate: null,
 
     voucherItems: [
       {
@@ -118,6 +118,7 @@ module.exports = () => {
             id: "21",
             name: "GST18",
           },
+          taxGroup: "GST",
         },
       },
       {
@@ -140,25 +141,10 @@ module.exports = () => {
             id: "21",
             name: "GST18",
           },
+          taxGroup: "GST",
         },
       },
     ],
     voucherAttachments: [],
-    // voucherWHTaxes: [
-    //   {
-    //     voucherId: 0,
-    //     srNo: 0,
-    //     taxId: 0,
-    //     taxCode: null,
-    //     exchangeRate: 0,
-    //     taxRate: 0,
-    //     certificateNo: "",
-    //     annexure: null,
-    //     taxAmountLC: 0,
-    //     taxableAmountLC: 0,
-    //     taxAmountFC: 0,
-    //     taxableAmountFC: 0,
-    //   },
-    // ],
   };
 };

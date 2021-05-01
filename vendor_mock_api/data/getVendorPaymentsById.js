@@ -25,7 +25,7 @@ module.exports = () => {
     cashGL: null,
     paymentDate: "0001-01-01T00:00:00",
     bankReferenceNo: "A123",
-    bankReferenceDate: "0001-01-01T00:00:00",
+    bankReferenceDate: null,
     currency: {
       id: 0,
       code: null,
