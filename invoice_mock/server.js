@@ -24,6 +24,13 @@ app.get("/organisations", function (req, res) {
   res.status(200).send(getOrganizations());
 });
 
+app.get("/numbering-setup", function (req, res) {
+  console.log("/organisation/:id");
+  res
+    .status(200)
+    .send({ number: 0, prefix: "Jun", suffix: "/21-22", seriesId: 0 });
+});
+
 app.get("/cost-centers", function (req, res) {
   console.log("/invoice presets");
   res.status(200).send(getInvoicePresets());

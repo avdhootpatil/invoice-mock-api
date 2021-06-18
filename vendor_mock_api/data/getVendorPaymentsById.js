@@ -1,17 +1,18 @@
 module.exports = () => {
   return {
     id: 0,
+    isDraft: false,
     voucherNo: "abc1",
     voucherDate: "0001-01-01T00:00:00",
     vendor: {
-      id: 0,
-      name: null,
+      id: 1,
+      name: "Soft Pvt. Limited",
     },
     vendorBranch: {
-      id: 0,
-      name: null,
-      salesPerson: null,
-      transactionType: null,
+      id: 1,
+      branchName: "Delhi",
+      salesPerson: "Samson",
+      transactionType: { id: 1, code: "B2B", name: "Registered" },
       gstin: null,
       stateCode: null,
     },
@@ -26,10 +27,15 @@ module.exports = () => {
     paymentDate: "0001-01-01T00:00:00",
     bankReferenceNo: "A123",
     bankReferenceDate: null,
+    bankTaxRate: {
+      id: "21",
+      name: "GST18",
+    },
+    bankTaxGroup: "GST",
     currency: {
-      id: 0,
-      code: null,
-      name: null,
+      id: 241,
+      code: "INR",
+      name: "Indian Rupee",
       currencyCode: null,
     },
     exRate: 0.0,
@@ -100,14 +106,11 @@ module.exports = () => {
           name: "GST18",
           rate: 18,
         },
-        category: {
+        taxCategory: {
           id: "1202",
           name: "67890-EFBHS",
           code: "05690",
-          taxRate: {
-            id: "21",
-            name: "GST18",
-          },
+          taxRate: null,
         },
       },
       {
@@ -118,11 +121,8 @@ module.exports = () => {
         baseRate: 50,
         taxAmountFC: 1.8,
         availCredit: false,
-        taxRate: {
-          name: "GST18",
-          rate: 18,
-        },
-        category: {
+        taxRate: null,
+        taxCategory: {
           id: "1202",
           name: "67890-EFBHS",
           code: "05690",

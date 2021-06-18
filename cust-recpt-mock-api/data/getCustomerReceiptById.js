@@ -24,7 +24,10 @@ module.exports = () => {
     bankReferenceNo: "ryryr",
     bankReferenceDate: "2021-04-08T22:45:30.9743561+05:30",
     bankTaxRateName: "GST18",
-    bankTaxRate: 18.0,
+    bankTaxRate: {
+      name: "GST18",
+      rate: 18,
+    },
     bankTaxGroup: "GST",
     bankAmount: 2000.0,
     debitToBank: 2400,
@@ -106,11 +109,8 @@ module.exports = () => {
         baseRate: 50,
         taxAmountFC: 1.8,
         availCredit: false,
-        taxRate: {
-          name: "GST18",
-          rate: 18,
-        },
-        category: {
+        taxRate: 0,
+        taxCategory: {
           id: "1202",
           name: "67890-EFBHS",
           code: "05690",
@@ -129,11 +129,8 @@ module.exports = () => {
         baseRate: 50,
         taxAmountFC: 1.8,
         availCredit: false,
-        taxRate: {
-          name: "GST18",
-          rate: 18,
-        },
-        category: {
+        taxRate: 0,
+        taxCategory: {
           id: "1202",
           name: "67890-EFBHS",
           code: "05690",

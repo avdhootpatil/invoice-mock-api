@@ -20,10 +20,23 @@ var getGeneralLedgers = require("./data/getGeneralLedgers");
 var getTaxCategories = require("./data/getTaxCategories");
 var getWhTaxes = require("./data/getWhTaxes");
 const getwhTaxes = require("./data/getWhTaxes");
+var getOrganizationById = require("./data/getOrganizationById");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
+
+app.get("/organisations/:id", function (req, res) {
+  console.log("/organisation/:id");
+  res.status(200).send(getOrganizationById());
+});
+
+app.get("/purchase/numbering-setup", function (req, res) {
+  console.log("/organisation/:id");
+  res
+    .status(200)
+    .send({ number: 0, prefix: "Jun", suffix: "/21-22", seriesId: 12 });
+});
 
 app.get("/organisations", function (req, res) {
   console.log("/organizations");

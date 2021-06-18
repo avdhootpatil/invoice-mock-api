@@ -11,7 +11,7 @@ module.exports = () => {
   //   cessRate: 2,
   // };
   return {
-    id: 38,
+    id: 34,
     type: "G",
     name: "Product1",
     code: "Pd",

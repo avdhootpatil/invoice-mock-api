@@ -10,6 +10,7 @@ module.exports = () => {
         name: "GST18",
       },
       cess: 20,
+      taxGroup: "GST",
     },
     {
       id: "1204",
@@ -20,6 +21,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1202",
@@ -29,6 +31,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1203",
@@ -38,6 +41,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1205",
@@ -47,6 +51,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1206",
@@ -57,6 +62,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1207",
@@ -66,6 +72,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1208",
@@ -75,6 +82,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1209",
@@ -85,6 +93,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1210",
@@ -94,6 +103,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1211",
@@ -103,6 +113,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
     {
       id: "1212",
@@ -113,6 +124,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      taxGroup: "GST",
     },
   ];
 };

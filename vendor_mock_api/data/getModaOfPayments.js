@@ -6,7 +6,7 @@ module.exports = () => {
       type: "Income",
     },
     {
-      name: "cheque",
+      name: "Cheque",
       id: 2,
       type: "Expense",
     },

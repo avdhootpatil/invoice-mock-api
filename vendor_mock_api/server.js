@@ -26,10 +26,26 @@ var postTaxHeads = require("./data/postTaxHeads");
 var getChequeStocks = require("./data/getChequeStocks");
 const getLocations = require("./data/getLocations");
 const getAnnexures = require("./data/getAnnexures");
+var getOrganizationById = require("./data/getOrganizationById");
+var getUsdByOrgId = require("./data/getUsdOrgById");
 
 app.get("/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
+});
+
+app.get("/organisations/:id", function (req, res) {
+  console.log("/organizations");
+  if (req.params.id === "2056") {
+    console.log("first org");
+    res.status(200).send(getOrganizationById());
+  } else if (req.params.id === "15005") {
+    console.log("first org");
+    res.status(200).send(getUsdByOrgId());
+  } else {
+    console.log("third org");
+    res.status(200).send(getOrganizationById());
+  }
 });
 
 app.get("/jobs", function (req, res) {
