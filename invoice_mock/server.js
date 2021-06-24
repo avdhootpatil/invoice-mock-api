@@ -14,10 +14,16 @@ var getCurrencies = require("./data/getCurrencies");
 var getGoodsAndServices = require("./data/getGoodsAndServices");
 var getGoodsAndServicesById = require("./data/getGoodsAndServicesById");
 var postTaxHeads = require("./data/postTaxHeads");
+var getOrganizationById = require("./data/getOrganizationById");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
+
+app.get("/organisations/:id", function (req, res) {
+  console.log("/organisation/:id");
+  res.status(200).send(getOrganizationById());
+});
 
 app.get("/organisations", function (req, res) {
   console.log("/organisations");
