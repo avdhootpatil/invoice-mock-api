@@ -126,7 +126,16 @@ app.post("/invoice/approval-required", function (req, res) {
 app.post("/invoice", function (req, res) {
   console.log("/invoice  => post request");
   console.log(req.body.isDraft);
-  res.status(201).send({ id: 1 });
+  // res.status(201).send({ id: 1 });
+  res.status(400).send({
+    message: "The request is invalid.",
+    modelState: {
+      customerBranch: ["Branch is required"],
+      customer: ["Customer is required"],
+      currency: ["currency is required"],
+      lineItems: ["at least one"],
+    },
+  });
 });
 
 app.put("/invoice/:id", function (req, res) {

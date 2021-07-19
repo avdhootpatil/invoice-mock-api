@@ -1,16 +1,16 @@
 module.exports = () => {
   return {
     companyId: 3,
-    id: 2140,
-    name: "Zorro Inc",
-    alias: "Zorro Inc.",
+    id: 2056,
+    name: "Monitor Logistics",
+    alias: "Monitor Logistics.",
     deletedOn: null,
     branches: [
       {
         companyId: 3,
-        organisationId: 2140,
+        organisationId: 2056,
         id: 2219,
-        branchName: "Mumbai",
+        branchName: "mumbai",
         address: {
           addressLine1: "Ap #595-491 Integer Road",
           addressLine2: "Antioquia",
@@ -79,8 +79,8 @@ module.exports = () => {
         name: "Indian Rupee",
       },
       vendorGLCurrency: {
-        id: 337,
-        code: "USD",
+        id: 241,
+        code: "INR",
         name: "Indian Rupee",
       },
       organisationType: "",
@@ -102,7 +102,7 @@ module.exports = () => {
         name: "TDSA",
       },
       whTaxReceivableRate: 1000.0,
-      whTaxPayableRate: 10,
+      whTaxPayableRate: 10.0,
       taxExemption: {
         certificateNo: "Jgjj84dasdadasd",
         reducedRate: 0.0,

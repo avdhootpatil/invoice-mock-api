@@ -88,7 +88,18 @@ app.put("/organisations/:id", function (req, res) {
 app.post("/organisations", function (req, res) {
   console.log("organization saved");
   console.log(req.body);
-  res.status(201).send({ id: 1, branches: [{ id: 1, name: "xyz" }] });
+  res.status(400).send({
+    message: "The request is invalid.",
+    modelState: {
+      "model.Name": ["name is requierd"],
+      // "model.Branches": ["The Branches field is required."],
+      "model.Branches[0].AddressLine1": ["The AddressLine1 field is required."],
+      "model.Branches[0].Country": ["The Country field is required."],
+      "model.Branches[0].City": ["The City field is required."],
+    },
+  });
+  // res.status(500).send({});
+  // res.status(201).send({ id: 1, branches: [{ id: 1, name: "xyz" }] });
 });
 
 app.post("/organisations/:id/accountInfo", function (req, res) {
@@ -153,17 +164,37 @@ app.delete("/organisations/:id/branchRegistration/:id", function (req, res) {
 
 app.post("/organisations/:id/kyc", function (req, res) {
   console.log("kyc saved");
-  res.status(200).send({ id: 1 });
+  // res.status(200).send({ id: 1 });
+  // res.status(500).send();
+  res.status(400).send({
+    message: "invalid",
+    modelState: {
+      "model.Branches[0].AddressLine1": ["The AddressLine1 field is required."],
+      "model.Branches[0].Country": ["The Country field is required."],
+      "model.Branches[0].City": ["The City field is required."],
+    },
+  });
 });
 
 app.put("/organisations/:id/kyc", function (req, res) {
   console.log("kyc updated");
-  res.status(200).send("success");
+  // res.status(200).send("success");
+  res.status(500).send();
 });
 
 app.post("/organisations/:id/branches", function (req, res) {
   console.log("branch saved");
-  res.status(200).send({ id: 1 });
+  // res.status(200).send({ id: 1 });
+  res.status(400).send({
+    message: "invalid",
+    modelState: {
+      "model.Branches[0].BranchName": ["The Branch name field is required."],
+      "model.Branches[0].AddressLine1": ["The AddressLine1 field is required."],
+      "model.Branches[0].Country": ["The Country field is required."],
+      "model.Branches[0].City": ["The City field is required."],
+    },
+  });
+  // res.status(500).send();
 });
 
 app.put("/organisations/:id/branches/:id", function (req, res) {

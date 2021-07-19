@@ -34,6 +34,13 @@ app.get("/organisations", function (req, res) {
   res.status(200).send(getOrganizations());
 });
 
+app.get("/general-ledgers/:id/number-series", function (req, res) {
+  console.log("numbering-setup");
+  res
+    .status(200)
+    .send({ number: 1, prefix: "Jun", suffix: "/21-22", seriesId: 0 });
+});
+
 app.get("/organisations/:id", function (req, res) {
   console.log("/organizations");
   if (req.params.id === "2056") {
@@ -145,7 +152,18 @@ app.post("/vendorpayments/tax-heads", function (req, res) {
 
 app.post("/vendorpayments", function (req, res) {
   console.log("/vendor-payments", req.body);
-  res.status(201).send({ message: "successfully posted" });
+  // res.status(201).send({ message: "successfully posted" });
+  res.status(400).send({
+    message: "invalid request",
+    modelState: {
+      paymentMode: ["mode of payments is required"],
+      cashGL: ["required"],
+      currency: ["reuierd"],
+      voucherAdvances: [
+        "You cannot add multiple advances for the same location",
+      ],
+    },
+  });
 });
 
 app.listen(6006, () => {

@@ -26,10 +26,33 @@ var postTaxHeads = require("./data/postTaxHeads");
 var getChequeStocks = require("./data/getChequeStocks");
 const getLocations = require("./data/getLocations");
 const getAnnexures = require("./data/getAnnexures");
+var getOrganizationById = require("./data/getOrganizationById");
+var getUsdByOrgId = require("./data/getUsdOrgById");
 
 app.get("/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
+});
+
+app.get("/general-ledgers/:id/number-series", function (req, res) {
+  console.log("numbering-setup");
+  res
+    .status(200)
+    .send({ number: 1, prefix: "Jun", suffix: "/21-22", seriesId: 0 });
+});
+
+app.get("/organisations/:id", function (req, res) {
+  console.log("/organizations");
+  if (req.params.id === "2056") {
+    console.log("first org");
+    res.status(200).send(getOrganizationById());
+  } else if (req.params.id === "15005") {
+    console.log("first org");
+    res.status(200).send(getUsdByOrgId());
+  } else {
+    console.log("third org");
+    res.status(200).send(getOrganizationById());
+  }
 });
 
 app.get("/jobs", function (req, res) {
@@ -129,7 +152,19 @@ app.post("/vendorpayments/tax-heads", function (req, res) {
 
 app.post("/customerreceipts", function (req, res) {
   console.log("/customer-receipts", req.body);
-  res.status(201).send({ id: 1 });
+  // res.status(201).send({ id: 1 });
+  res.status(400).send({
+    message: "invalid request",
+    modelState: {
+      paymentMode: ["mode of payments is required"],
+      cashGL: ["required"],
+      currency: ["reuierd"],
+      voucherAdvances: [
+        "You cannot add multiple advances for the same location",
+      ],
+    },
+  });
+  // res.status(500).send();
 });
 
 app.listen(6006, () => {

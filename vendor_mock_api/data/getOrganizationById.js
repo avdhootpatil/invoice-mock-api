@@ -37,7 +37,12 @@ module.exports = () => {
         isDefault: true,
         deletedOn: null,
         gstin: null,
-        transactionType: {},
+        transactionType: {
+          id: 5,
+          code: "EXP",
+          name: "Registered",
+          value: null,
+        },
         salesPerson: {},
         collectionExecutive: {},
       },

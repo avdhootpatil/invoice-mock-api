@@ -54,6 +54,7 @@ module.exports = () => {
           id: 997214,
           code: 997214,
           name: "Trade services of time-share properties",
+          baseRate: 50,
         },
         abatement: 0,
         rcm: 0,

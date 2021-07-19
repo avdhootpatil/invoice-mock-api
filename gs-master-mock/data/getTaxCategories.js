@@ -31,6 +31,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1203",
@@ -40,6 +41,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1205",
@@ -49,6 +51,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1206",
@@ -59,6 +62,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1207",
@@ -68,6 +72,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1208",
@@ -77,6 +82,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1209",
@@ -87,6 +93,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1210",
@@ -96,6 +103,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1211",
@@ -105,6 +113,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
     {
       id: "1212",
@@ -115,6 +124,7 @@ module.exports = () => {
         id: "21",
         name: "GST18",
       },
+      baseRate: 100,
     },
   ];
 };
