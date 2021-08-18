@@ -1,0 +1,33 @@
+{
+  "globalGLID": 0,
+  "linkedWith": 0,
+  "workPeriodID": 0, //fiscla period id
+  "active": false, // true
+  "jobNoMandatory": false, //job mendatory fields
+  "affectsGrossProfit": false, // false
+  "glAlias": null, //null
+  "isFixedCurrency": false, // isFixed
+  "locationID": 0, // all 0 selected id -->visibility
+  "compID": 0, // company id
+  "showBreakup": false, //false
+  "openBalAmt": 0.0, // 0
+  "openBalType": null, //null
+  "status": false, //true
+  "position": 0, //0
+  "treeLevel": 0, // parent +1
+  "sysDefined": false, // false
+  "canBudget": false, //false
+  "showInCF": false, //false
+  "isCtrlAcc": false, // false
+  "isGlobal": false, // all true single false -->visibility
+  "glGroup": "\u0000", //type on modal
+  "parentID": 0, //parentID
+  "currency": 0, //currency
+  "glType": "\u0000", // logo type
+  "primaryType": "\u0000", //primaryType
+  "glName": null, //name
+  "glCode": null, //code
+  "glid": 0, //node id
+  "glName_UC": null,
+  " ": null
+}
