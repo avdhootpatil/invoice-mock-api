@@ -10,23 +10,31 @@ module.exports = () => {
     {
       id: 2,
       name: "kerala",
-      censusCode: "92",
+      censusCode: "91",
       gstStateName: "32-KERALA",
       unecStateCode: "KL",
     },
     {
       id: 3,
       name: "gujarat",
-      censusCode: "93",
+      censusCode: "91",
       gstStateName: "24-GUJARAT",
       unecStateCode: "GJ",
     },
     {
       id: 4,
       name: "jharakhand",
-      censusCode: "94",
+      censusCode: "91",
       gstStateName: "20-JHARKHAND",
       unecStateCode: "JH",
+    },
+    {
+      id: 99,
+      name: "Others",
+      censusCode: 99,
+      gstStateName: "99-Others",
+      unecStateCode: null,
+      isut: false,
     },
   ];
 };

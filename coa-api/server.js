@@ -130,7 +130,7 @@ app.get("/chartofaccounts/search", function (req, res) {
   res.status(200).send(getSearchData());
 });
 
-app.post("/chartofaccounts/general-ledger", function (req, res) {
+app.post("/general-ledger", function (req, res) {
   console.log("/post-data");
   res.status(200).send({ id: 1, message: "test" });
 });

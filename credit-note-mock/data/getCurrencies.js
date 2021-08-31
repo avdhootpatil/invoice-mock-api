@@ -1,0 +1,63 @@
+module.exports = () => {
+  return [
+    {
+      id: 178,
+      code: "AUD",
+      name: "Australian Dollar",
+      currencyCode: null,
+    },
+    { id: 197, code: "CAD", name: "Canadian Dollar", currencyCode: null },
+    {
+      id: 206,
+      code: "CRC",
+      name: "Costa Rican Colon",
+      currencyCode: null,
+    },
+    { id: 210, code: "DKK", name: "Danish Krone", currencyCode: null },
+    { id: 221, code: "EUR", name: "Euro", currencyCode: null },
+    { id: 237, code: "HKD", name: "Hongkong Dollar", currencyCode: null },
+    {
+      id: 239,
+      code: "HUF",
+      name: "Hungarian Forint",
+      currencyCode: null,
+    },
+    { id: 241, code: "INR", name: "Indian Rupee", currencyCode: null },
+    { id: 249, code: "JPY", name: "Japanese Yen", currencyCode: null },
+    { id: 252, code: "KES", name: "Kenyan Shilling", currencyCode: null },
+    {
+      id: 289,
+      code: "NZD",
+      name: "New Zealand Dollar",
+      currencyCode: null,
+    },
+    {
+      id: 293,
+      code: "NOK",
+      name: "Norwegian Krones",
+      currencyCode: null,
+    },
+    {
+      id: 300,
+      code: "PHP",
+      name: "Phillipines Pesos",
+      currencyCode: null,
+    },
+    { id: 303, code: "GBP", name: "Pound Sterling", currencyCode: null },
+    { id: 305, code: "ZAR", name: "Rand", currencyCode: null },
+    { id: 308, code: "RUR", name: "Rouble", currencyCode: null },
+    {
+      id: 312,
+      code: "SGD",
+      name: "Singapore Dollar",
+      currencyCode: null,
+    },
+    { id: 323, code: "SEK", name: "Swedish Krona", currencyCode: null },
+    { id: 324, code: "CHF", name: "Swiss Franc", currencyCode: null },
+    { id: 329, code: "THB", name: "Thai Bahts", currencyCode: null },
+    { id: 335, code: "AED", name: "UAE Dirham", currencyCode: null },
+    { id: 337, code: "USD", name: "US Dollar", currencyCode: null },
+    { id: 343, code: "CNY", name: "Yuan Renminbi", currencyCode: null },
+    { id: 346, code: "BRL", name: "Brazilian real", currencyCode: null },
+  ];
+};

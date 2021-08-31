@@ -88,18 +88,18 @@ app.put("/organisations/:id", function (req, res) {
 app.post("/organisations", function (req, res) {
   console.log("organization saved");
   console.log(req.body);
-  res.status(400).send({
-    message: "The request is invalid.",
-    modelState: {
-      "model.Name": ["name is requierd"],
-      // "model.Branches": ["The Branches field is required."],
-      "model.Branches[0].AddressLine1": ["The AddressLine1 field is required."],
-      "model.Branches[0].Country": ["The Country field is required."],
-      "model.Branches[0].City": ["The City field is required."],
-    },
-  });
+  // res.status(400).send({
+  //   message: "The request is invalid.",
+  //   modelState: {
+  //     "model.Name": ["name is requierd"],
+
+  //     "model.Branches[0].AddressLine1": ["The AddressLine1 field is required."],
+  //     "model.Branches[0].Country": ["The Country field is required."],
+  //     "model.Branches[0].City": ["The City field is required."],
+  //   },
+  // });
   // res.status(500).send({});
-  // res.status(201).send({ id: 1, branches: [{ id: 1, name: "xyz" }] });
+  res.status(201).send({ id: 1, branches: [{ id: 1, name: "xyz" }] });
 });
 
 app.post("/organisations/:id/accountInfo", function (req, res) {
@@ -149,7 +149,15 @@ app.delete("/organisations/:id/contactPersons/:id", function (req, res) {
 
 app.post("/organisations/:id/branchRegistration", function (req, res) {
   console.log("branchRegistration saved");
-  res.status(200).send({ id: 1 });
+  // res.status(200).send({ id: 1 });
+  res.status(400).send({
+    modelState: {
+      branch: [
+        "The Selected registration type already exists for the given branch",
+      ],
+    },
+  });
+  // res.status(500).send("error");
 });
 
 app.put("/organisations/:id/branchRegistration/:id", function (req, res) {
@@ -216,8 +224,7 @@ app.post("/organisations/:id/attachments", function (req, res) {
   console.log("document saved");
   res.status(200).send({
     id: 1,
-    url:
-      "https://www.google.com/search?q=pdf+logo&sxsrf=ALeKk010pU-4eYCPdojDIWELFSNb8ShAyw:1604408161319&tbm=isch&source=iu&ictx=1&fir=1ELdRA6RsQC3lM%252CL_BnzsMbORazMM%252C_&vet=1&usg=AI4_-kRZ5llGXVsncbuBF_jEdC0LcFojuQ&sa=X&ved=2ahUKEwj-w56UtubsAhWVheYKHWKYC0AQ9QF6BAgKEFc&biw=968&bih=696#imgrc=1ELdRA6RsQC3lM",
+    url: "https://www.google.com/search?q=pdf+logo&sxsrf=ALeKk010pU-4eYCPdojDIWELFSNb8ShAyw:1604408161319&tbm=isch&source=iu&ictx=1&fir=1ELdRA6RsQC3lM%252CL_BnzsMbORazMM%252C_&vet=1&usg=AI4_-kRZ5llGXVsncbuBF_jEdC0LcFojuQ&sa=X&ved=2ahUKEwj-w56UtubsAhWVheYKHWKYC0AQ9QF6BAgKEFc&biw=968&bih=696#imgrc=1ELdRA6RsQC3lM",
     name: "AOA",
   });
 });
