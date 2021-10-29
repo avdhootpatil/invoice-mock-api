@@ -2,62 +2,242 @@ module.exports = () => {
   return [
     {
       id: 178,
-      code: "AUD",
+
+      code: null,
+
       name: "Australian Dollar",
-      currencyCode: null,
+
+      currencyCode: "AUD",
     },
-    { id: 197, code: "CAD", name: "Canadian Dollar", currencyCode: null },
+
+    {
+      id: 197,
+
+      code: null,
+
+      name: "Canadian Dollar",
+
+      currencyCode: "CAD",
+    },
+
     {
       id: 206,
-      code: "CRC",
+
+      code: null,
+
       name: "Costa Rican Colon",
-      currencyCode: null,
+
+      currencyCode: "CRC",
     },
-    { id: 210, code: "DKK", name: "Danish Krone", currencyCode: null },
-    { id: 221, code: "EUR", name: "Euro", currencyCode: null },
-    { id: 237, code: "HKD", name: "Hongkong Dollar", currencyCode: null },
+
+    {
+      id: 210,
+
+      code: null,
+
+      name: "Danish Krone",
+
+      currencyCode: "DKK",
+    },
+
+    {
+      id: 221,
+
+      code: null,
+
+      name: "Euro",
+
+      currencyCode: "EUR",
+    },
+
+    {
+      id: 237,
+
+      code: null,
+
+      name: "Hongkong Dollar",
+
+      currencyCode: "HKD",
+    },
+
     {
       id: 239,
-      code: "HUF",
+
+      code: null,
+
       name: "Hungarian Forint",
-      currencyCode: null,
+
+      currencyCode: "HUF",
     },
-    { id: 241, code: "INR", name: "Indian Rupee", currencyCode: null },
-    { id: 249, code: "JPY", name: "Japanese Yen", currencyCode: null },
-    { id: 252, code: "KES", name: "Kenyan Shilling", currencyCode: null },
+
+    {
+      id: 241,
+
+      code: "INR",
+
+      name: "Indian Rupee",
+
+      currencyCode: "INR",
+    },
+
+    {
+      id: 249,
+
+      code: null,
+
+      name: "Japanese Yen",
+
+      currencyCode: "JPY",
+    },
+
+    {
+      id: 252,
+
+      code: null,
+
+      name: "Kenyan Shilling",
+
+      currencyCode: "KES",
+    },
+
     {
       id: 289,
-      code: "NZD",
+
+      code: null,
+
       name: "New Zealand Dollar",
-      currencyCode: null,
+
+      currencyCode: "NZD",
     },
+
     {
       id: 293,
-      code: "NOK",
+
+      code: null,
+
       name: "Norwegian Krones",
-      currencyCode: null,
+
+      currencyCode: "NOK",
     },
+
     {
       id: 300,
-      code: "PHP",
+
+      code: null,
+
       name: "Phillipines Pesos",
-      currencyCode: null,
+
+      currencyCode: "PHP",
     },
-    { id: 303, code: "GBP", name: "Pound Sterling", currencyCode: null },
-    { id: 305, code: "ZAR", name: "Rand", currencyCode: null },
-    { id: 308, code: "RUR", name: "Rouble", currencyCode: null },
+
+    {
+      id: 303,
+
+      code: null,
+
+      name: "Pound Sterling",
+
+      currencyCode: "GBP",
+    },
+
+    {
+      id: 305,
+
+      code: null,
+
+      name: "Rand",
+
+      currencyCode: "ZAR",
+    },
+
+    {
+      id: 308,
+
+      code: null,
+
+      name: "Rouble",
+
+      currencyCode: "RUR",
+    },
+
     {
       id: 312,
+
       code: "SGD",
+
       name: "Singapore Dollar",
-      currencyCode: null,
+
+      currencyCode: "SGD",
     },
-    { id: 323, code: "SEK", name: "Swedish Krona", currencyCode: null },
-    { id: 324, code: "CHF", name: "Swiss Franc", currencyCode: null },
-    { id: 329, code: "THB", name: "Thai Bahts", currencyCode: null },
-    { id: 335, code: "AED", name: "UAE Dirham", currencyCode: null },
-    { id: 337, code: "USD", name: "US Dollar", currencyCode: null },
-    { id: 343, code: "CNY", name: "Yuan Renminbi", currencyCode: null },
-    { id: 346, code: "BRL", name: "Brazilian real", currencyCode: null },
+
+    {
+      id: 323,
+
+      code: null,
+
+      name: "Swedish Krona",
+
+      currencyCode: "SEK",
+    },
+
+    {
+      id: 324,
+
+      code: null,
+
+      name: "Swiss Franc",
+
+      currencyCode: "CHF",
+    },
+
+    {
+      id: 329,
+
+      code: null,
+
+      name: "Thai Bahts",
+
+      currencyCode: "THB",
+    },
+
+    {
+      id: 335,
+
+      code: null,
+
+      name: "UAE Dirham",
+
+      currencyCode: "AED",
+    },
+
+    {
+      id: 337,
+
+      code: null,
+
+      name: "US Dollar",
+
+      currencyCode: "USD",
+    },
+
+    {
+      id: 343,
+
+      code: null,
+
+      name: "Yuan Renminbi",
+
+      currencyCode: "CNY",
+    },
+
+    {
+      id: 346,
+
+      code: null,
+
+      name: "Brazilian real",
+
+      currencyCode: "BRL",
+    },
   ];
 };

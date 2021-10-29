@@ -21,6 +21,7 @@ var getTaxCategories = require("./data/getTaxCategories");
 var getWhTaxes = require("./data/getWhTaxes");
 const getwhTaxes = require("./data/getWhTaxes");
 var getOrganizationById = require("./data/getOrganizationById");
+var taxGroups = require("./data/getTaxGroups");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -111,6 +112,16 @@ app.get("/general-ledgers", function (req, res) {
 app.get("/wh-taxes", function (req, res) {
   console.log("/wh-taxes");
   res.status(200).send(getwhTaxes());
+});
+
+app.get("/countries/:id/tax-groups", (req, res) => {
+  console.log("tacxGroups");
+  res.status(200).send(taxGroups());
+});
+
+app.get("/countries/code", (req, res) => {
+  console.log("countryCode");
+  res.status(200).send("IN");
 });
 
 app.post("/purchase/due-date", function (req, res) {

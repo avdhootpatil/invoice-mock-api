@@ -53,7 +53,7 @@ app.get("/taxgroups/VAT/tax-rates", (req, res) => {
   res.status(200).send(taxRates.vatTaxRates);
 });
 
-app.get("/countries/IN/tax-groups", (req, res) => {
+app.get("/countries/:id/tax-groups", (req, res) => {
   console.log("tacxGroups");
   res.status(200).send(taxGroups());
 });
@@ -68,6 +68,11 @@ app.get("/countries/:id/tax-categories", (req, res) => {
 
 app.get("/goodsAndServicesGroup", (req, res) => {
   res.status(200).send(gsGroups());
+});
+
+app.get("/companies/country-code", function (req, res) {
+  console.log("/home-currency");
+  res.status(200).send("INR");
 });
 
 app.get("/general-ledgers", (req, res) => {

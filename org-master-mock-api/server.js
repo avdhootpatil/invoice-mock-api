@@ -19,6 +19,7 @@ var getWhTaxCodes = require("./data/getWhTaxCodes");
 var getRegistrationTypes = require("./data/getRegistrationTypes");
 var getDocumentTypes = require("./data/getDocumentTypes");
 var getCurrencies = require("./data/getCurrencies");
+var getGlGroups = require("./data/getGlGroups");
 
 app.get("/organisations/:id", function (req, res) {
   console.log("/organisation");
@@ -60,7 +61,15 @@ app.get("/general-ledgers", function (req, res) {
   res.status(200).send(getGeneralLedgers());
 });
 
-app.get("/transactiontypes", function (req, res) {
+app.get("/is-gl-transacted", function (req, res) {
+  console.log("/transacted");
+  res.status(200).send({
+    isCustomerTransacted: false,
+    isVendorTransacted: false,
+  });
+});
+
+app.get("/countries/:id/transaction-types", function (req, res) {
   console.log("/transactiontypes");
   res.status(200).send(getTransactionTypes());
 });
@@ -73,6 +82,11 @@ app.get("/registrationtypes", function (req, res) {
 app.get("/whtaxcodes", function (req, res) {
   console.log("/whtaxcodes");
   res.status(200).send(getWhTaxCodes());
+});
+
+app.get("/organisations/:isCustomer/general-ledger-group", function (req, res) {
+  console.log("/getGlGroups");
+  res.status(200).send(getGlGroups());
 });
 
 app.get("/documenttypes", function (req, res) {
@@ -107,6 +121,11 @@ app.post("/organisations/:id/accountInfo", function (req, res) {
   res.status(200).send({ id: 1 });
 });
 
+app.post("/create-general-ledger", function (req, res) {
+  console.log("general ledger created");
+  res.status(200).send({ customerGlId: 2, vendorGlId: 0 });
+});
+
 app.put("/organisations/:id/accountInfo", function (req, res) {
   console.log("accountinfo saved");
   res.status(200).send("success");
@@ -130,6 +149,11 @@ app.post("/organisations/:id/banks/:id/setasdefault", function (req, res) {
 app.delete("/organisations/:id/banks/:id", function (req, res) {
   console.log("banks deleted");
   res.status(200).send("success");
+});
+
+app.get("/companies/currency-code", function (req, res) {
+  console.log("/home-currency");
+  res.status(200).send("SGD");
 });
 
 app.post("/organisations/:id/contactPersons", function (req, res) {
@@ -239,6 +263,6 @@ app.delete("/organisations/:id/attachments/:id", function (req, res) {
   res.status(200).send("success");
 });
 
-app.listen(6002, () => {
-  console.log("Server started at 6002");
+app.listen(6003, () => {
+  console.log("Server started at 6003");
 });

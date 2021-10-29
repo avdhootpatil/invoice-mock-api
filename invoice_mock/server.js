@@ -15,6 +15,7 @@ var getGoodsAndServices = require("./data/getGoodsAndServices");
 var getGoodsAndServicesById = require("./data/getGoodsAndServicesById");
 var postTaxHeads = require("./data/postTaxHeads");
 var getOrganizationById = require("./data/getOrganizationById");
+var taxGroups = require("./data/getTaxGroups");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -82,17 +83,27 @@ app.get("/organisations/:id/branches", function (req, res) {
   res.status(200).send(getBranchById());
 });
 
+app.get("/countries/:id/tax-groups", (req, res) => {
+  console.log("tacxGroups");
+  res.status(200).send(taxGroups());
+});
+
+app.get("/countries/code", (req, res) => {
+  console.log("countryCode");
+  res.status(200).send("IN");
+});
+
 app.get("/invoice/:id", function (req, res) {
   console.log("/invoiceById");
   res.status(200).send(getInvoiceById());
 });
 
-app.post("/invoice/due-date", function (req, res) {
+app.post("/invoices/due-date", function (req, res) {
   console.log(req.data);
   res.status(200).send("2020-10-10T06:19:17.923");
 });
 
-app.post("/invoice/tax-heads", function (req, res) {
+app.post("/invoices/tax-heads", function (req, res) {
   console.log("/taxheads", req.body);
   if (req.body.hasLUT === "YES") {
     res.status(201).send(postTaxHeads());
@@ -101,19 +112,19 @@ app.post("/invoice/tax-heads", function (req, res) {
       {
         invoiceId: 0,
         taxAmount: 16.2,
-        code: "SGST",
+        code: "GST",
         taxRatePart: 50.0,
         taxType: "GST",
         applicableOn: "ITEM",
       },
-      {
-        invoiceId: 0,
-        taxAmount: 16.2,
-        code: "CGST",
-        taxRatePart: 50.0,
-        taxType: "GST",
-        applicableOn: "ITEM",
-      },
+      // {
+      //   invoiceId: 0,
+      //   taxAmount: 16.2,
+      //   code: "CGST",
+      //   taxRatePart: 50.0,
+      //   taxType: "GST",
+      //   applicableOn: "ITEM",
+      // },
     ]);
   }
 });
@@ -143,6 +154,6 @@ app.put("/invoice/:id", function (req, res) {
   res.status(201).send();
 });
 
-app.listen(6001, () => {
-  console.log("Server started at 6001");
+app.listen(6002, () => {
+  console.log("Server started at 6002");
 });
