@@ -60,7 +60,7 @@ app.get("/jobs", function (req, res) {
   res.status(200).send(getJobs());
 });
 
-app.get("/vendorpayments/:id", function (req, res) {
+app.get("/vendor-payments/:id", function (req, res) {
   console.log("/vendorpayments");
   res.status(200).send(getVendorePaymentsById());
 });
@@ -140,7 +140,7 @@ app.get("/purchase", function (req, res) {
   res.status(200).send(getPurchaseList());
 });
 
-app.post("/vendorpayments/retrieve-bills", function (req, res) {
+app.post("/vendor-payments/retrieve-bills", function (req, res) {
   console.log("/retrievebills");
   res.status(200).send(getPurchaseList());
 });
@@ -166,6 +166,6 @@ app.post("/vendorpayments", function (req, res) {
   });
 });
 
-app.listen(6006, () => {
-  console.log("Server started at 6006");
+app.listen(6007, () => {
+  console.log("Server started at 6007");
 });

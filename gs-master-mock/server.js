@@ -85,15 +85,15 @@ app.get("/charge-categories", (req, res) => {
 
 app.post("/goodsandservices", (req, res) => {
   // res.status(200).send({ id: 1 });
-  // res.status(400).send({
-  //   message: "invalid request.",
-  //   modelState: {
-  //     // "model.taxCategory": ["required"],
-  //     taxGroup: ["error"],
-  //     taxCategory: ["error"],
-  //   },
-  // });
-  res.status(500).send();
+  res.status(400).send({
+    message: "invalid request.",
+    modelState: {
+      // "model.taxCategory": ["required"],
+      taxGroup: ["error"],
+      taxCategory: ["error"],
+    },
+  });
+  // res.status(500).send();
 });
 
 app.put("/goodsandservices/:id", (req, res) => {

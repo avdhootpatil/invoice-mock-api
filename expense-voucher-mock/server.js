@@ -26,6 +26,7 @@ const getChequeStock = require("./data/getChequeStock");
 const getRemarks = require("./data/getRemarks");
 const getVatTaxRates = require("./data/getVatTaxRates");
 const getNumberSeries = require("./data/getNumberSeries");
+const getJournalEntries = require("./data/getJournalEntries");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -223,6 +224,11 @@ app.post("/purchase/approval-required", function (req, res) {
   res.status(201).send(false);
 });
 
+app.post("/AccHelper.asmx/GetJounalEntry", function (req, res) {
+  console.log("/journalEntries");
+  res.status(200).send(getJournalEntries());
+});
+
 // purchase/approval
 app.post("/purchase/approval", function (req, res) {
   console.log("/purchase/approval-required ");
@@ -240,6 +246,6 @@ app.get("/general-ledgers/:id/number-series", function (req, res) {
   res.status(200).send(getNumberSeries());
 });
 
-app.listen(6003, () => {
-  console.log("Server started at 6003 voucher");
+app.listen(6004, () => {
+  console.log("Server started at 6004 voucher");
 });

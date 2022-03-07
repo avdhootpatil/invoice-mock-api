@@ -114,6 +114,11 @@ app.get("/wh-taxes", function (req, res) {
   res.status(200).send(getwhTaxes());
 });
 
+app.get("/companies/country-code", (req, res) => {
+  console.log("countryCode");
+  res.status(200).send("IN");
+});
+
 app.get("/countries/:id/tax-groups", (req, res) => {
   console.log("tacxGroups");
   res.status(200).send(taxGroups());
@@ -197,6 +202,6 @@ app.post("/purchase", function (req, res) {
   res.status(201).send({ id: 1 });
 });
 
-app.listen(6002, () => {
-  console.log("Server started at 6002");
+app.listen(6005, () => {
+  console.log("Server started at 6005");
 });

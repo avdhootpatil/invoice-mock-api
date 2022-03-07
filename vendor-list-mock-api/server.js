@@ -12,7 +12,7 @@ var getOrganizations = require("./data/getOrganizations");
 // var getCountries = require("./data/getCountries");
 // var getCurrencies = require("./data/getCurrencies");
 
-app.get("/vendorpayments", function (req, res) {
+app.get("/vendor-payments", function (req, res) {
   console.log("/vendorpayments");
   res.status(200).send(getVendorPayments());
 });
@@ -36,6 +36,12 @@ app.get("/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
 });
-app.listen(6003, () => {
-  console.log("Server started at 6003");
+
+app.delete("/vendor-payments/:id", function (req, res) {
+  console.log("purchase deleted");
+  res.status(200).send("success");
+});
+
+app.listen(7000, () => {
+  console.log("Server started at 7000");
 });

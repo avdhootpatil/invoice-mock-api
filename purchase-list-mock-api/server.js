@@ -8,6 +8,12 @@ app.use(bodyParser.json());
 app.use(cors({ origin: true }));
 
 var getPurchaseList = require("./data/getPurchaseList");
+const getOrganisations = require("./data/getOrganizations");
+
+app.get("/organisations", function (req, res) {
+  console.log("/organizations");
+  res.status(200).send(getOrganisations());
+});
 
 app.get("/purchase", function (req, res) {
   console.log("/purchase");

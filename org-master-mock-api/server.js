@@ -61,6 +61,16 @@ app.get("/general-ledgers", function (req, res) {
   res.status(200).send(getGeneralLedgers());
 });
 
+app.get("/companies/currency-code", function (req, res) {
+  console.log("/currency-code");
+  res.status(200).send("DHR");
+});
+
+app.get("/companies/country-code", function (req, res) {
+  console.log("/country-code");
+  res.status(200).send("IN");
+});
+
 app.get("/is-gl-transacted", function (req, res) {
   console.log("/transacted");
   res.status(200).send({

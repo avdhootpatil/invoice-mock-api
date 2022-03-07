@@ -16,6 +16,8 @@ var getGoodsAndServicesById = require("./data/getGoodsAndServicesById");
 var postTaxHeads = require("./data/postTaxHeads");
 var getOrganizationById = require("./data/getOrganizationById");
 var taxGroups = require("./data/getTaxGroups");
+var getChargesByJobId = require("./data/getChargesById");
+const getJournalEntries = require("./data/getJournalEntries");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -36,6 +38,10 @@ app.get("/numbering-setup", function (req, res) {
   res
     .status(200)
     .send({ number: 0, prefix: "Jun", suffix: "/21-22", seriesId: 0 });
+});
+
+app.get("/jobs/:id/charges", function (req, res) {
+  res.status(200).send(getChargesByJobId());
 });
 
 app.get("/cost-centers", function (req, res) {
@@ -73,8 +79,99 @@ app.get("/goodsandservices", function (req, res) {
   res.status(200).send(getGoodsAndServices());
 });
 
+app.get("/companies/currency-code", function (req, res) {
+  console.log("/currency-code");
+  res.status(200).send("DHR");
+});
+
 app.get("/goodsandservices/:id", function (req, res) {
   console.log("/goodsandservices/:id");
+  if (req.params.id === 1) {
+    res.status(200).send({
+      id: 71,
+      type: "G",
+      name: "1.5 Tonne AC",
+      code: "",
+      chargeCategory: { id: 3, name: "Revenue" },
+      unitsOfMeasurement: {
+        id: 48,
+        code: "NOS",
+        description: "Number",
+        type: "Number",
+      },
+      goodsAndServicesGroup: { id: 8, name: "White Goods" },
+      taxGroup: { name: "VAT", code: "VAT" },
+      taxCategory: {
+        id: 9862,
+        code: "84151010",
+        name: "",
+        taxGroup: null,
+        baseRate: 100.0,
+      },
+      taxRate: { name: "VAT5", rate: 5.0 },
+      costGL: null,
+      incomeGL: {
+        id: 21342,
+        name: "Product 1 Sales",
+        code: "IDS0004020",
+        type: "I",
+        group: "O",
+        currency: null,
+      },
+      costCurrency: { id: 335, code: "AED", name: null, currencyCode: null },
+      salesCurrency: { id: 335, code: "AED", name: null, currencyCode: null },
+      salesPrice: 10000.0,
+      costPrice: 0.0,
+      abatement: 0.0,
+      cessRate: 0.0,
+    });
+  } else if (req.params.id === 19) {
+    res.status(200).send({
+      id: 72,
+      type: "S",
+      name: "AC Servicing",
+      code: "",
+      chargeCategory: { id: 1, name: "Margin" },
+      unitsOfMeasurement: {
+        id: 48,
+        code: "NOS",
+        description: "Number",
+        type: "Number",
+      },
+      goodsAndServicesGroup: null,
+      taxGroup: { name: "VAT", code: "VAT" },
+      taxCategory: {
+        id: 9872,
+        code: "84159000",
+        name: "",
+        taxGroup: null,
+        baseRate: 100.0,
+      },
+      taxRate: { name: "VAT5", rate: 5.0 },
+      costGL: {
+        id: 21360,
+        name: "Direct Labor Costs",
+        code: "EDD0005100",
+        type: "E",
+        group: "O",
+        currency: null,
+      },
+      incomeGL: {
+        id: 21343,
+        name: "Product 2 Sales",
+        code: "IDS0004040",
+        type: "I",
+        group: "O",
+        currency: null,
+      },
+      costCurrency: { id: 335, code: "AED", name: null, currencyCode: null },
+      salesCurrency: { id: 335, code: "AED", name: null, currencyCode: null },
+      salesPrice: 1000.0,
+      costPrice: 500.0,
+      abatement: 0.0,
+      cessRate: 0.0,
+    });
+  }
   res.status(200).send(getGoodsAndServicesById());
 });
 
@@ -88,12 +185,12 @@ app.get("/countries/:id/tax-groups", (req, res) => {
   res.status(200).send(taxGroups());
 });
 
-app.get("/countries/code", (req, res) => {
+app.get("/companies/country-code", (req, res) => {
   console.log("countryCode");
   res.status(200).send("IN");
 });
 
-app.get("/invoice/:id", function (req, res) {
+app.get("/invoices/:id", function (req, res) {
   console.log("/invoiceById");
   res.status(200).send(getInvoiceById());
 });
@@ -101,6 +198,11 @@ app.get("/invoice/:id", function (req, res) {
 app.post("/invoices/due-date", function (req, res) {
   console.log(req.data);
   res.status(200).send("2020-10-10T06:19:17.923");
+});
+
+app.post("/AccHelper.asmx/GetJounalEntry", function (req, res) {
+  console.log("/journalEntries");
+  res.status(200).send(getJournalEntries());
 });
 
 app.post("/invoices/tax-heads", function (req, res) {
@@ -117,14 +219,14 @@ app.post("/invoices/tax-heads", function (req, res) {
         taxType: "GST",
         applicableOn: "ITEM",
       },
-      // {
-      //   invoiceId: 0,
-      //   taxAmount: 16.2,
-      //   code: "CGST",
-      //   taxRatePart: 50.0,
-      //   taxType: "GST",
-      //   applicableOn: "ITEM",
-      // },
+      {
+        invoiceId: 0,
+        taxAmount: 16.2,
+        code: "CGST",
+        taxRatePart: 50.0,
+        taxType: "GST",
+        applicableOn: "ITEM",
+      },
     ]);
   }
 });
@@ -154,6 +256,6 @@ app.put("/invoice/:id", function (req, res) {
   res.status(201).send();
 });
 
-app.listen(6002, () => {
-  console.log("Server started at 6002");
+app.listen(6005, () => {
+  console.log("Server started at 6005");
 });

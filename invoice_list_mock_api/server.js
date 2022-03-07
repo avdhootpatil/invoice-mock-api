@@ -12,7 +12,7 @@ var getOrganizations = require("./data/getOrganizations");
 var getCountries = require("./data/getCountries");
 var getCurrencies = require("./data/getCurrencies");
 
-app.get("/invoice", function (req, res) {
+app.get("/invoices", function (req, res) {
   console.log("/invoices");
   res.status(200).send(getInvoiceList());
 });

@@ -26,6 +26,7 @@ const getSalesPersons = require("./data/getSalesPersons");
 const getCreditNoteById = require("./data/getCreditNoteById");
 const getCreditNotes = require("./data/getCreditNotes");
 const getAnnexures = require("./data/getAnnexures");
+var getChargesByJobId = require("./data/getChargesById");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -39,6 +40,10 @@ app.get("/organisations", function (req, res) {
 app.get("/invoice/presets", function (req, res) {
   console.log("/invoice presets");
   res.status(200).send(getInvoicePresets());
+});
+
+app.get("/jobs/:id/charges", function (req, res) {
+  res.status(200).send(getChargesByJobId());
 });
 
 app.get("/countries", function (req, res) {
@@ -79,6 +84,27 @@ app.get("/organisations/:id/branches", function (req, res) {
 app.get("/debit-note/:id", function (req, res) {
   console.log("/getCreditNoteById");
   res.status(200).send(getCreditNoteById());
+});
+
+app.get("/debit-notes/numbering-setup", function (req, res) {
+  console.log("/organisation/:id");
+  res
+    .status(200)
+    .send({ number: 1, prefix: "Jun", suffix: "/21-22", seriesId: 1 });
+});
+
+app.get("/countries/:id/tax-groups", (req, res) => {
+  console.log("tacxGroups");
+  res.status(200).send([
+    {
+      code: "GST",
+      name: "GST",
+    },
+    {
+      code: "VAT",
+      name: "VAT",
+    },
+  ]);
 });
 
 app.get("/taxgroups/GST/tax-rates", function (req, res) {
@@ -141,7 +167,7 @@ app.get("/employees", function (req, res) {
   res.status(200).send(getSalesPersons());
 });
 
-app.post("/debit-note/tax-heads", function (req, res) {
+app.post("/debit-notes/tax-heads", function (req, res) {
   console.log("/taxheads", req.body);
   if (req.body.placeOfSupply?.name === "maharashtra") {
     res.status(201).send(postTaxHeads());
@@ -209,6 +235,16 @@ app.get("/debit-note", function (req, res) {
 
 app.get("/debit-notes", function (req, res) {
   res.status(200).send(getCreditNotes());
+});
+
+app.get("/companies/currency-code", function (req, res) {
+  console.log("/currency-code");
+  res.status(200).send("DHR");
+});
+
+app.get("/companies/country-code", function (req, res) {
+  console.log("/country-code");
+  res.status(200).send("IN");
 });
 
 app.get("/presets/validate-date-range", function (req, res) {

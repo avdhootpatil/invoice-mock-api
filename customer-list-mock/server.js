@@ -12,7 +12,7 @@ var getOrganizations = require("./data/getOrganizations");
 var getCountries = require("./data/getCountries");
 var getCurrencies = require("./data/getCurrencies");
 
-app.get("/customerreceipts", function (req, res) {
+app.get("/customer-receipts", function (req, res) {
   console.log("/customerreceipts");
   res.status(200).send(getCustomerReceipts());
 });
@@ -22,7 +22,7 @@ app.delete("/customerreceipts/:id", function (req, res) {
   res.status(200).send("success");
 });
 
-app.get("/organisations", function (req, res) {
+app.get("/api/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
 });
@@ -42,6 +42,6 @@ app.get("/currencies", function (req, res) {
   res.status(200).send(getCurrencies());
 });
 
-app.listen(6004, () => {
-  console.log("Server started at 6004");
+app.listen(6005, () => {
+  console.log("Server started at 6005");
 });

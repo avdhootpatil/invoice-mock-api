@@ -1,0 +1,82 @@
+module.exports = () => {
+  return {
+    items: [
+      {
+        companyId: 3,
+        id: 140,
+        name: "Astrum Labs",
+        alias: "Astrum",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 134,
+        name: "Astrum Labs Pvt Ltd",
+        alias: "Astrum",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 3147,
+        name: "Ferrari Exports",
+        alias: "FE",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 1142,
+        name: "Larsen & Toubro",
+        alias: "L&T",
+        deletedOn: null,
+      },
+      { companyId: 3, id: 3216, name: "LogiSys", alias: "", deletedOn: null },
+      { companyId: 3, id: 4258, name: "New Org", alias: "NO", deletedOn: null },
+      {
+        companyId: 3,
+        id: 3142,
+        name: "plank co.",
+        alias: "plnk",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 4262,
+        name: "Sharvil Exports",
+        alias: "",
+        deletedOn: null,
+      },
+      { companyId: 3, id: 4324, name: "te", alias: "test", deletedOn: null },
+      { companyId: 3, id: 4323, name: "test", alias: "test", deletedOn: null },
+      { companyId: 3, id: 4260, name: "Test 1", alias: "", deletedOn: null },
+      {
+        companyId: 3,
+        id: 4261,
+        name: "UAE Organisation",
+        alias: "UAE O",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 3164,
+        name: "VED Exports",
+        alias: "",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 4259,
+        name: "VED EXpT pvt ltd",
+        alias: "",
+        deletedOn: null,
+      },
+      {
+        companyId: 3,
+        id: 2140,
+        name: "Zorro Inc",
+        alias: "Zorro Inc.",
+        deletedOn: null,
+      },
+    ],
+    totalCount: 15,
+  };
+};

@@ -28,6 +28,7 @@ const getLocations = require("./data/getLocations");
 const getAnnexures = require("./data/getAnnexures");
 var getOrganizationById = require("./data/getOrganizationById");
 var getUsdByOrgId = require("./data/getUsdOrgById");
+const getJournalEntries = require("./data/getJournalEntries");
 
 app.get("/organisations", function (req, res) {
   console.log("/organizations");
@@ -55,12 +56,16 @@ app.get("/organisations/:id", function (req, res) {
   }
 });
 
+app.post("/AccHelper.asmx/GetJounalEntry", function (req, res) {
+  console.log("/journalEntries");
+  res.status(200).send(getJournalEntries());
+});
 app.get("/jobs", function (req, res) {
   console.log("/jobs");
   res.status(200).send(getJobs());
 });
 
-app.get("/customerreceipts/:id", function (req, res) {
+app.get("/customer-receipts/:id", function (req, res) {
   console.log("/vendorpayments");
   res.status(200).send(getCustomerReceiptById());
 });
@@ -140,12 +145,22 @@ app.get("/purchase", function (req, res) {
   res.status(200).send(getPurchaseList());
 });
 
-app.post("/customerreceipts/retrieve-bills", function (req, res) {
+app.get("/companies/currency-code", function (req, res) {
+  console.log("/currency-code");
+  res.status(200).send("DHR");
+});
+
+app.get("/companies/country-code", function (req, res) {
+  console.log("/country-code");
+  res.status(200).send("IN");
+});
+
+app.post("/customer-receipts/retrieve-bills", function (req, res) {
   console.log("/retrievebills");
   res.status(200).send(getPurchaseList());
 });
 
-app.post("/vendorpayments/tax-heads", function (req, res) {
+app.post("/customer-receipts/tax-heads", function (req, res) {
   console.log("/taxheads", req.body);
   res.status(201).send(postTaxHeads());
 });
@@ -167,6 +182,6 @@ app.post("/customerreceipts", function (req, res) {
   // res.status(500).send();
 });
 
-app.listen(6006, () => {
-  console.log("Server started at 6006");
+app.listen(6008, () => {
+  console.log("Server started at 6008");
 });

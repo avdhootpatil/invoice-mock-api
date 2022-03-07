@@ -26,6 +26,8 @@ const getOrgById = require("./data/getOrgById");
 const getSalesPersons = require("./data/getSalesPersons");
 const getCreditNoteById = require("./data/getCreditNoteById");
 const getCreditNotes = require("./data/getCreditNotes");
+var getChargesByJobId = require("./data/getChargesById");
+const getJournalEntries = require("./data/getJournalEntries");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -34,6 +36,10 @@ app.use(cors({ origin: true }));
 app.get("/organisations", function (req, res) {
   console.log("/organizations");
   res.status(200).send(getOrganizations());
+});
+
+app.get("/jobs/:id/charges", function (req, res) {
+  res.status(200).send(getChargesByJobId());
 });
 
 app.get("/invoice/presets", function (req, res) {
@@ -79,6 +85,30 @@ app.get("/organisations/:id/branches", function (req, res) {
 app.get("/credit-note/:id", function (req, res) {
   console.log("/getCreditNoteById");
   res.status(200).send(getCreditNoteById());
+});
+
+app.get("/companies/currency-code", function (req, res) {
+  console.log("/currency-code");
+  res.status(200).send("DHR");
+});
+
+app.get("/companies/country-code", function (req, res) {
+  console.log("/country-code");
+  res.status(200).send("IN");
+});
+
+app.get("/countries/:id/tax-groups", (req, res) => {
+  console.log("tacxGroups");
+  res.status(200).send([
+    {
+      code: "GST",
+      name: "GST",
+    },
+    {
+      code: "VAT",
+      name: "VAT",
+    },
+  ]);
 });
 
 app.get("/taxgroups/GST/tax-rates", function (req, res) {
@@ -184,11 +214,24 @@ app.post("/credit-note/tax-heads", function (req, res) {
   }
 });
 
+app.post("/AccHelper.asmx/GetJounalEntry", function (req, res) {
+  console.log("/journalEntries");
+  res.status(200).send(getJournalEntries());
+});
+
 app.post("/credit-note", function (req, res) {
   console.log("/credit-note  => post request");
   // console.log(req.body.pl);
   // if(req.body.placeOfSupply.name === "maharashtra")
   res.status(201).send({ id: 1, series: "ABCE" });
+  // res.status(400).send({
+  //   message: "The request is invalid.",
+  //   modelState: {
+  //     outstandingInvoiceAmount: [
+  //       "Total Amount exceeds Outstanding Invoice Amount",
+  //     ],
+  //   },
+  // });
 });
 
 app.put("/credit-note/:id", function (req, res) {
@@ -211,6 +254,6 @@ app.get("/organisations/:id", function (req, res) {
   res.status(200).send(getOrgById());
 });
 
-app.listen(8002, () => {
-  console.log("Server started at 8002");
+app.listen(8001, () => {
+  console.log("Server started at 8001");
 });
